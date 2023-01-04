@@ -1,7 +1,7 @@
 {
   "DatasetName": "default.cds",
   "EntityName": "Beat Plans",
-  "InstanceUrl": "https://org2d7572c7.crm8.dynamics.com/",
+  "InstanceUrl": "https://org5db327b9.crm8.dynamics.com/",
   "LocalReferenceDSJson": {
     "entitySetName": "zx_beatplans",
     "logicalName": "zx_beatplan"
