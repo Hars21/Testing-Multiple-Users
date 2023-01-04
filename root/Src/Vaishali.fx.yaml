@@ -1,0 +1,21 @@
+Vaishali As screen:
+
+    Label12 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =28
+        Text: ="Vaishali Jindal"
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    Button10 As button:
+        Height: =70
+        Size: =24
+        Text: ="Button"
+        Width: =280
+        X: =141
+        Y: =321
+        ZIndex: =2
+
