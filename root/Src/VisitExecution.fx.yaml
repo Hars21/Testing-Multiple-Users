@@ -1,0 +1,2114 @@
+"VisitExecution As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.LightText
+    OnVisible: =
+
+    Header_15 As Header:
+        HeaderText: ="Order"
+
+    Gallery13_4 As gallery.galleryHorizontal:
+        AccessibleLabel: ="Gallery13_4"
+        BorderColor: =RGBA(109, 109, 109, 1)
+        Height: =62
+        Items: |-
+            =Table(
+                {
+                    Title: "Order Booking",
+                    id: 1
+                },
+                {
+                    Title: "Payments",
+                    id: 3
+                },
+                {
+                    Title: "Return Requests",
+                    id: 2
+                }
+                
+            )
+        OnSelect: =
+        ShowScrollbar: =false
+        TabIndex: =
+        TemplateSize: =243
+        Y: =80
+        ZIndex: =2
+
+        Button31_14 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =If(ThisItem.IsSelected,_VarGblAppColors.BisleriBlueLight, _VarGblAppColors.BisleriBlue)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlue, _VarGblAppColors.BisleriBlueLight)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            Font: =Font.'Segoe UI'
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =_VarGblAppColors.BisleriBlue
+            HoverFill: =ColorFade(Self.Color, 10%)
+            PressedBorderColor: =ColorFade(RGBA(255, 200, 61, 1), 50%)
+            PressedColor: =_VarGblAppColors.BisleriBlue
+            PressedFill: =ColorFade(Self.Color, 30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =18
+            Text: =ThisItem.Title
+            Width: =242
+            Y: =3
+            ZIndex: =1
+
+    OrderBook As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =908
+        Visible: =Gallery13_4.Selected.Title = "Order Booking"
+        Width: =Parent.Width
+        Y: =153
+        ZIndex: =3
+
+        DataCard1_4 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            NewOrder_1 As NewOrder:
+
+    PaymentsVisits As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =920
+        Visible: =//Gallery13_4.Selected.Title = "Payments"
+        Width: =Parent.Width
+        Y: =141
+        ZIndex: =4
+
+        DataCard1_9 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1961
+            Width: =Parent.Width
+            WidthFit: =false
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            lblPaymentAmountLabel_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Amount"
+                Width: =230
+                X: =40
+                Y: =1070
+                ZIndex: =1
+
+            txtPaymentAmountValue_1 As text:
+                AccessibleLabel: ="txtPaymentAmountValue_1"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                Default: =""
+                FocusedBorderThickness: =2
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Enter Amount"
+                HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =230
+                X: =352
+                Y: =1067
+                ZIndex: =2
+
+            lblPaymentRemainingAmountValue_1 As label:
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="0"
+                Width: =217
+                X: =352
+                Y: =1120
+                ZIndex: =5
+
+            lblPaymentRemainingAmount_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Remaining Amount"
+                Width: =267
+                X: =40
+                Y: =1120
+                ZIndex: =6
+
+            lblModeOfPayment_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="Mode of Payment"
+                Width: =560
+                X: =40
+                Y: =892
+                ZIndex: =9
+
+            rdbModeOfPayment_1 As radio:
+                AccessibleLabel: ="rdbModeOfPayment_1"
+                FocusedBorderThickness: =0.5
+                Height: =63
+                Items: =["Cash", "Cheque"]
+                Layout: =Layout.Horizontal
+                RadioSelectionFill: =_VarGblAppColors.BisleriBlue
+                RadioSize: =42
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =293
+                X: =40
+                Y: =932
+                ZIndex: =10
+
+            lblPaymentDate_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Date"
+                Width: =230
+                X: =40
+                Y: =1022
+                ZIndex: =11
+
+            shpUpperRect_1 As rectangle:
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =_VarGblAppColors.BottomListBg
+                Height: =60
+                Width: =App.Width
+                Y: =707
+                ZIndex: =17
+
+            shpLowerRect_1 As rectangle:
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =_VarGblAppColors.BottomListBg
+                Height: =60
+                Width: =App.Width
+                Y: =827
+                ZIndex: =18
+
+            lblPaymentIncoiceNo_1 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Invoice No."
+                Width: =307
+                X: =10
+                Y: =707
+                ZIndex: =19
+
+            lblPaymentAmount_1 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Amount (INR)"
+                Width: =307
+                X: =333
+                Y: =707
+                ZIndex: =20
+
+            lblPaymentInvoiceNoValue_1 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =21
+                Text: ="RI2223R260005477"
+                Width: =307
+                X: =10
+                Y: =767
+                ZIndex: =21
+
+            lblPaymentAmountValue_1 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =21
+                Text: ="₹ 1500"
+                Width: =307
+                X: =333
+                Y: =767
+                ZIndex: =22
+
+            lblPaymentDetails_1 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Payment Details"
+                Width: =307
+                X: =10
+                Y: =827
+                ZIndex: =23
+
+            ImgPaymentPaytm_1 As image:
+                BorderColor: =_VarGblAppColors.HeaderBg
+                BorderThickness: =2
+                Height: =67
+                Image: ='Paytm Image'
+                Visible: =If(rdbModeOfPayment_1.Selected.Value ="Cash", true, false)
+                Width: =135
+                X: =370
+                Y: =928
+                ZIndex: =24
+
+            lblPaymentDateValue_1 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: =Text(DateValue(Today()), "mmm dd, yyyy")
+                Width: =217
+                X: =352
+                Y: =1022
+                ZIndex: =25
+
+            Gallery1_1 As gallery.galleryVertical:
+                AccessibleLabel: ="Gallery1_1"
+                Height: =447
+                Items: ='Items Masters'
+                Layout: =Layout.Vertical
+                TabIndex: =0
+                TemplateSize: =175
+                ZIndex: =27
+
+                HtmlText1_1 As htmlViewer:
+                    Height: =185
+                    HtmlText: |-
+                        ="<div style='border-radius:15px 15px 15px 15px; background-color:#E6F7F6; width:590px; height:170px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =612
+                    X: =18
+                    Y: =2
+                    ZIndex: =1
+
+                Label4_13 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Bold
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: =ThisItem.'Item Description'
+                    Tooltip: =ThisItem.'Item Description'
+                    Width: =560
+                    Wrap: =false
+                    X: =40
+                    Y: =10
+                    ZIndex: =2
+
+                Rectangle2_1 As rectangle:
+                    BorderColor: =_VarGblAppColors.SecondaryText
+                    BorderStyle: =BorderStyle.Dotted
+                    BorderThickness: =0.5
+                    Fill: =_VarGblAppColors.SecondaryText
+                    Height: =0.5
+                    OnSelect: =Select(Parent)
+                    Width: =560
+                    X: =40
+                    Y: =130
+                    ZIndex: =3
+
+                Label4_16 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Cases"
+                    Width: =70
+                    X: =71
+                    Y: =55
+                    ZIndex: =4
+
+                Label4_14 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="PCs"
+                    Width: =57
+                    X: =258
+                    Y: =55
+                    ZIndex: =7
+
+                Label4_18 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="E. Jars"
+                    Width: =70
+                    X: =430
+                    Y: =55
+                    ZIndex: =8
+
+                Label4_24 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: |-
+                        ="Total Price:"
+                    Width: =130
+                    X: =70
+                    Y: =130
+                    ZIndex: =9
+
+                Label4_29 As label:
+                    Color: =_VarGblAppColors.HeaderBg
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="₹402.50"
+                    Width: =127
+                    X: =200
+                    Y: =130
+                    ZIndex: =10
+
+                Label4_17 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="2"
+                    Width: =108
+                    X: =135
+                    Y: =55
+                    ZIndex: =11
+
+                Label4_15 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="6"
+                    Width: =95
+                    X: =315
+                    Y: =55
+                    ZIndex: =14
+
+                Label4_19 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="0"
+                    Width: =97
+                    X: =503
+                    Y: =55
+                    ZIndex: =15
+
+                Label4_20 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Disc."
+                    Width: =70
+                    X: =71
+                    Y: =89
+                    ZIndex: =16
+
+                Label4_21 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="GST"
+                    Width: =57
+                    X: =258
+                    Y: =89
+                    ZIndex: =17
+
+                Label4_22 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Price"
+                    Width: =70
+                    X: =430
+                    Y: =89
+                    ZIndex: =18
+
+                Label4_23 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="0.0"
+                    Width: =108
+                    X: =135
+                    Y: =89
+                    ZIndex: =19
+
+                Label4_30 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="18.0"
+                    Width: =95
+                    X: =315
+                    Y: =89
+                    ZIndex: =20
+
+                Label4_31 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="₹161.00"
+                    Width: =97
+                    X: =503
+                    Y: =89
+                    ZIndex: =21
+
+                Label4_32 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: |-
+                        ="Invoice Price:"
+                    X: =341
+                    Y: =130
+                    ZIndex: =22
+
+                Label4_33 As label:
+                    Color: =_VarGblAppColors.HeaderBg
+                    FontWeight: =FontWeight.Bold
+                    Height: =44
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="₹402.50"
+                    Width: =127
+                    X: =486
+                    Y: =130
+                    ZIndex: =23
+
+            grpPaymentButtons_1 As group:
+                Height: =5
+                Width: =5
+                X: =80
+                Y: =80
+                ZIndex: =27
+
+                btnPaymentCancel_1 As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: =Navigate('Payment Screen');
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Cancel"
+                    Width: =150
+                    X: =334
+                    Y: =1793
+                    ZIndex: =16
+
+                btnPaymentConfirm_1 As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: =Navigate('Payment Screen');
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Confirm"
+                    Width: =150
+                    X: =156
+                    Y: =1793
+                    ZIndex: =26
+
+            Button4_1 As button:
+                DisplayMode: =DisplayMode.Disabled
+                Height: =208
+                Size: =24
+                Text: =""
+                Width: =540
+                X: =50
+                Y: =468
+                ZIndex: =28
+
+            Label5_8 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Total Qty"
+                Width: =192
+                X: =111
+                Y: =481
+                ZIndex: =29
+
+            Label5_10 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Total Inv Amt"
+                Width: =192
+                X: =111
+                Y: =526
+                ZIndex: =30
+
+            Label5_18 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="GST"
+                Width: =192
+                X: =111
+                Y: =575
+                ZIndex: =31
+
+            Label5_20 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Total Amt"
+                Width: =192
+                X: =111
+                Y: =619
+                ZIndex: =32
+
+            Label5_9 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="1820"
+                Width: =192
+                X: =318
+                Y: =481
+                ZIndex: =33
+
+            Label5_11 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="₹13566"
+                Width: =192
+                X: =318
+                Y: =526
+                ZIndex: =34
+
+            Label5_19 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="18%"
+                Width: =192
+                X: =318
+                Y: =575
+                ZIndex: =35
+
+            Label5_21 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="₹14521"
+                Width: =192
+                X: =318
+                Y: =619
+                ZIndex: =36
+
+            Label12_4 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =47
+                Size: =19
+                Text: ="Customer Signature"
+                Width: =300
+                X: =40
+                Y: =1182
+                ZIndex: =38
+
+            Label12_5 As label:
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =47
+                Size: =19
+                Text: ="Salesperson Signature"
+                Width: =300
+                X: =40
+                Y: =1465
+                ZIndex: =40
+
+    ReturnRequests As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =908
+        Visible: =Gallery13_4.Selected.Title = "Return Requests"
+        Width: =Parent.Width
+        Y: =147
+        ZIndex: =5
+
+        DataCard1_12 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =908
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            ReturnOrderComp_1 As ReturnOrderComp:
+                Height: =905
+
+    PaymentsVisitsTest As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =920
+        Visible: =Gallery13_4.Selected.Title = "Payments"
+        Width: =Parent.Width
+        Y: =142
+        ZIndex: =6
+
+        DataCard1_10 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =2240
+            Width: =Parent.Width
+            WidthFit: =false
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            lblPaymentAmountLabel_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Amount"
+                Width: =230
+                X: =40
+                Y: =1135
+                ZIndex: =1
+
+            txtPaymentAmountValue_2 As text:
+                AccessibleLabel: ="txtPaymentAmountValue_1"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                Default: =""
+                FocusedBorderThickness: =2
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Enter Amount"
+                HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =230
+                X: =352
+                Y: =1132
+                ZIndex: =2
+
+            lblPaymentRemainingAmountValue_2 As label:
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="0"
+                Width: =217
+                X: =352
+                Y: =1185
+                ZIndex: =3
+
+            lblPaymentRemainingAmount_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Remaining Amount"
+                Width: =267
+                X: =40
+                Y: =1185
+                ZIndex: =4
+
+            lblModeOfPayment_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="Mode of Payment"
+                Width: =560
+                X: =40
+                Y: =892
+                ZIndex: =5
+
+            rdbModeOfPayment_2 As radio:
+                AccessibleLabel: ="rdbModeOfPayment_1"
+                FocusedBorderThickness: =0.1
+                Height: =72
+                Items: =["Cash", "Cheque", "Coupon"]
+                Layout: =Layout.Horizontal
+                RadioSelectionFill: =_VarGblAppColors.BisleriBlue
+                RadioSize: =42
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =457
+                X: =27
+                Y: =935
+                ZIndex: =6
+
+            lblPaymentDate_2 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Date"
+                Width: =230
+                X: =40
+                Y: =1035
+                ZIndex: =7
+
+            shpUpperRect_2 As rectangle:
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =_VarGblAppColors.BottomListBg
+                Height: =60
+                Width: =App.Width
+                Y: =707
+                ZIndex: =9
+
+            shpLowerRect_2 As rectangle:
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =_VarGblAppColors.BottomListBg
+                Height: =60
+                Width: =App.Width
+                Y: =827
+                ZIndex: =10
+
+            lblPaymentIncoiceNo_2 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Invoice No."
+                Width: =307
+                X: =10
+                Y: =707
+                ZIndex: =11
+
+            lblPaymentAmount_2 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Amount (INR)"
+                Width: =307
+                X: =333
+                Y: =707
+                ZIndex: =12
+
+            lblPaymentInvoiceNoValue_2 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =21
+                Text: ="RI2223R260005477"
+                Width: =307
+                X: =10
+                Y: =767
+                ZIndex: =13
+
+            lblPaymentAmountValue_2 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =21
+                Text: ="₹ 1500"
+                Width: =307
+                X: =333
+                Y: =767
+                ZIndex: =14
+
+            lblPaymentDetails_2 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Payment Details"
+                Width: =307
+                X: =10
+                Y: =827
+                ZIndex: =15
+
+            ImgPaymentPaytm_2 As image:
+                BorderColor: =_VarGblAppColors.HeaderBg
+                BorderThickness: =2
+                Height: =67
+                Image: ='Paytm Image'
+                Visible: =If(rdbModeOfPayment_2.Selected.Value ="Cash", true, false)
+                Width: =135
+                X: =484
+                Y: =935
+                ZIndex: =16
+
+            lblPaymentDateValue_2 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: =Text(DateValue(Today()), "mmm dd, yyyy")
+                Width: =217
+                X: =352
+                Y: =1035
+                ZIndex: =17
+
+            Gallery1_2 As gallery.galleryVertical:
+                AccessibleLabel: ="Gallery1_1"
+                Height: =447
+                Items: ='Items Masters'
+                Layout: =Layout.Vertical
+                TabIndex: =0
+                TemplateSize: =133
+                Visible: =false
+                ZIndex: =19
+
+                HtmlText1_2 As htmlViewer:
+                    Height: =140
+                    HtmlText: |-
+                        ="<div style='border-radius:15px 15px 15px 15px; background-color:#E6F7F6; width:620px; height:300px'></div>"
+                    OnSelect: =Select(Parent)
+                    Width: =630
+                    ZIndex: =1
+
+                Label4_25 As label:
+                    Align: =Align.Justify
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =76
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: =ThisItem.'Item Description'
+                    Tooltip: =ThisItem.'Item Description'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =125
+                    X: =10
+                    Y: =57
+                    ZIndex: =2
+
+                Rectangle2_2 As rectangle:
+                    BorderColor: =_VarGblAppColors.SecondaryText
+                    BorderStyle: =BorderStyle.Dotted
+                    BorderThickness: =0.5
+                    Fill: =_VarGblAppColors.SecondaryText
+                    Height: =0.5
+                    OnSelect: =Select(Parent)
+                    Width: =600
+                    X: =10
+                    Y: =55
+                    ZIndex: =3
+
+                Label4_26 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="Cases"
+                    Width: =70
+                    X: =135
+                    Y: =12
+                    ZIndex: =4
+
+                Label4_28 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="PCs"
+                    Width: =57
+                    X: =186
+                    Y: =12
+                    ZIndex: =7
+
+                Label4_35 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="E. Jars"
+                    Width: =70
+                    X: =225
+                    Y: =12
+                    ZIndex: =8
+
+                Label4_43 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: |-
+                        ="Total Price:"
+                    Width: =53
+                    X: =479
+                    Y: =12
+                    ZIndex: =9
+
+                Label4_44 As label:
+                    Color: =_VarGblAppColors.HeaderBg
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="₹402.50"
+                    Width: =76
+                    X: =479
+                    Y: =90
+                    ZIndex: =10
+
+                Label4_27 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="2"
+                    Width: =51
+                    X: =135
+                    Y: =90
+                    ZIndex: =11
+
+                Label4_34 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="6"
+                    Width: =46
+                    X: =189
+                    Y: =90
+                    ZIndex: =14
+
+                Label4_36 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="0"
+                    Width: =57
+                    X: =235
+                    Y: =90
+                    ZIndex: =15
+
+                Label4_37 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="Disc."
+                    Width: =70
+                    X: =296
+                    Y: =12
+                    ZIndex: =16
+
+                Label4_39 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="GST"
+                    Width: =57
+                    X: =362
+                    Y: =12
+                    ZIndex: =17
+
+                Label4_41 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="Price"
+                    Width: =70
+                    X: =419
+                    Y: =12
+                    ZIndex: =18
+
+                Label4_38 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="0.0"
+                    Width: =54
+                    X: =298
+                    Y: =90
+                    ZIndex: =19
+
+                Label4_40 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="18.0"
+                    Width: =52
+                    X: =362
+                    Y: =90
+                    ZIndex: =20
+
+                Label4_42 As label:
+                    Color: =_VarGblAppColors.PrimaryText
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="₹161.00"
+                    Width: =69
+                    X: =417
+                    Y: =90
+                    ZIndex: =21
+
+                Label4_45 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =31
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: |-
+                        ="Invoice Price:"
+                    Width: =69
+                    X: =544
+                    Y: =12
+                    ZIndex: =22
+
+                Label4_46 As label:
+                    Color: =_VarGblAppColors.HeaderBg
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="₹402.50"
+                    Width: =76
+                    X: =544
+                    Y: =90
+                    ZIndex: =23
+
+                Label4_47 As label:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    OnSelect: =Select(Parent)
+                    Size: =_VarGblAppFonts.Size.Tiny
+                    Text: ="Product"
+                    Width: =92
+                    X: =15
+                    Y: =12
+                    ZIndex: =24
+
+            contHomeOrdersUpperVertical_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =447
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: |-
+                    =//Parent.Width
+                    640
+                ZIndex: =20
+
+                contHomeOrdersUpper_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =978
+                    LayoutMinHeight: =112
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    contHomeOrdersLowerVertical_1 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =906
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowX: =LayoutOverflow.Scroll
+                        Width: =640
+                        Y: =6
+                        ZIndex: =1
+
+                        contHomeOrdersHeading_1 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =60
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =750
+                            Width: =640
+                            ZIndex: =1
+
+                            btnNewOrderHeaderProduct_15 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Product"
+                                Width: =95
+                                X: =5
+                                Y: =5
+                                ZIndex: =1
+
+                            btnNewOrderHeaderCases_15 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Cases"
+                                Width: =62
+                                X: =btnNewOrderHeaderProduct_15.X + btnNewOrderHeaderProduct_15.Width +5
+                                Y: =5
+                                ZIndex: =2
+
+                            btnNewOrderHeaderPcs_17 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Pcs"
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_15.X+btnNewOrderHeaderCases_15.Width+5
+                                Y: =5
+                                ZIndex: =3
+
+                            btnNewOrderHeaderCases_16 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="E. Jars"
+                                Width: =62
+                                X: =btnNewOrderHeaderPcs_17.X+btnNewOrderHeaderPcs_17.Width+5
+                                Y: =5
+                                ZIndex: =4
+
+                            btnNewOrderHeaderCases_17 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Disc."
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_16.X+btnNewOrderHeaderCases_16.Width+5
+                                Y: =5
+                                ZIndex: =5
+
+                            btnNewOrderHeaderCases_18 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Tax"
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_17.X+btnNewOrderHeaderCases_17.Width+5
+                                Y: =5
+                                ZIndex: =6
+
+                            btnNewOrderHeaderCases_19 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Price"
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_18.X+btnNewOrderHeaderCases_18.Width+5
+                                Y: =5
+                                ZIndex: =7
+
+                            btnNewOrderHeaderCases_20 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Total Price"
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_19.X+btnNewOrderHeaderCases_19.Width+5
+                                Y: =5
+                                ZIndex: =8
+
+                            btnNewOrderHeaderCases_21 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Size: =_VarGblAppFonts.Size.Tiny
+                                Text: ="Inv. Price"
+                                Width: =62
+                                X: =btnNewOrderHeaderCases_20.X+btnNewOrderHeaderCases_20.Width+5
+                                Y: =5
+                                ZIndex: =9
+
+                        contHomeOrdersData_1 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =460
+                            LayoutMinHeight: =570
+                            LayoutMinWidth: =640
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =640
+                            ZIndex: =2
+
+                            galHomeOrdersData_1 As gallery.galleryVertical:
+                                AccessibleLabel: ="galHomeOrdersData"
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Fill: |-
+                                    =//RGBA(0, 0, 0, 0)
+                                    _VarGblAppColors.LightText
+                                FillPortions: =0
+                                Items: |-
+                                    =Table(
+                                        {
+                                            Title: "Bisleri Fonzo",
+                                            cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4678",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri 20 liter WaterCan",
+                                            cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4679",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri 500ml Bottle",
+                                           cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4677",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri Club Soda",
+                                           cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4676",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri Vedica",
+                                           cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4675",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri Spyci",
+                                            cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4674",
+                                            Mfg:"02 Dec 2022"
+                                        },
+                                         {
+                                            Title: "Bisleri Hand Purifiers",
+                                           cases: "450",
+                                            pieces:"15",
+                                            EJars: "5",
+                                            Disc:"60",
+                                            Tax:"18",
+                                            Price:"120",
+                                            TPrice:"5600",
+                                            InvPrice:"5600",
+                                            Batch:"HG4673",
+                                            Mfg:"02 Dec 2022"
+                                        }
+                                    )
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =413
+                                LayoutMinWidth: =1200
+                                ShowScrollbar: =false
+                                TabIndex: =0
+                                TemplateSize: =60
+                                Width: =contHomeOrdersData_1.Width
+                                ZIndex: =1
+
+                                btnHomeOrdersBackground_1 As button:
+                                    DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+                                    DisabledFill: |-
+                                        =//RGBA(244, 244, 244, 1)
+                                        ColorFade( _VarGblAppColors.BisleriBlue, 80%)
+                                    DisplayMode: =DisplayMode.Disabled
+                                    Height: =58
+                                    OnSelect: =Select(Parent)
+                                    Size: =24
+                                    Text: =""
+                                    Width: =640
+                                    ZIndex: =1
+
+                                lblHomeOrdersCustomer_1 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =53
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.Title
+                                    Width: =95
+                                    X: =btnNewOrderHeaderProduct_15.X
+                                    Y: =5
+                                    ZIndex: =2
+
+                                lblHomeOrdersProduct_1 As label:
+                                    Align: =Align.Center
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.cases
+                                    Width: =65
+                                    X: =103
+                                    Y: =4
+                                    ZIndex: =3
+
+                                lblHomeOrdersValue_1 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.pieces
+                                    Width: =65
+                                    X: =btnNewOrderHeaderPcs_17.X
+                                    Y: =4
+                                    ZIndex: =4
+
+                                lblHomeOrdersMode_1 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.EJars
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_16.X
+                                    Y: =4
+                                    ZIndex: =5
+
+                                lblHomeOrdersMode_2 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.Disc
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_17.X
+                                    Y: =4
+                                    ZIndex: =6
+
+                                lblHomeOrdersMode_3 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.Tax
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_18.X
+                                    Y: =4
+                                    ZIndex: =7
+
+                                lblHomeOrdersMode_4 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.Price
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_19.X
+                                    Y: =4
+                                    ZIndex: =8
+
+                                lblHomeOrdersMode_5 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.TPrice
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_20.X
+                                    Y: =4
+                                    ZIndex: =9
+
+                                lblHomeOrdersMode_6 As label:
+                                    Align: =Align.Center
+                                    Fill: |-
+                                        =RGBA(0, 0, 0, 0)
+                                        //_VarGblAppColors.LightText
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.InvPrice
+                                    Width: =65
+                                    X: =btnNewOrderHeaderCases_21.X
+                                    Y: =4
+                                    ZIndex: =10
+
+            Button4_2 As button:
+                DisplayMode: =DisplayMode.Disabled
+                Height: =188
+                Size: =24
+                Text: =""
+                Width: =540
+                X: =50
+                Y: =468
+                ZIndex: =21
+
+            Label5_12 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Total Qty"
+                Width: =192
+                X: =111
+                Y: =494
+                ZIndex: =22
+
+            Label5_14 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Total Inv Amt"
+                Width: =192
+                X: =111
+                Y: =539
+                ZIndex: =23
+
+            Label5_22 As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="GST"
+                Width: =192
+                X: =111
+                Y: =588
+                ZIndex: =24
+
+            Label5_13 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="1820"
+                Width: =192
+                X: =318
+                Y: =494
+                ZIndex: =25
+
+            Label5_15 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="₹13566"
+                Width: =192
+                X: =318
+                Y: =539
+                ZIndex: =26
+
+            Label5_23 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="18%"
+                Width: =192
+                X: =318
+                Y: =588
+                ZIndex: =27
+
+            grpPaymentButtons_2 As group:
+                Height: =5
+                Width: =5
+                X: =80
+                Y: =80
+                ZIndex: =27
+
+                btnPaymentCancel_2 As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: =Navigate('Payment Screen');
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Cancel"
+                    Width: =150
+                    X: =334
+                    Y: =2131
+                    ZIndex: =8
+
+                btnPaymentConfirm_2 As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: |-
+                        =//Navigate('Payment Screen');
+                        Set(VarPaymentConfirm, true);
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Confirm"
+                    Width: =150
+                    X: =156
+                    Y: =2131
+                    ZIndex: =18
+
+            lblPaymentDate_3 As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Total Invoice Value"
+                Width: =230
+                X: =40
+                Y: =1082
+                ZIndex: =28
+
+            lblPaymentDateValue_3 As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="₹ 1500"
+                Width: =217
+                X: =352
+                Y: =1082
+                ZIndex: =29
+
+            contCashPayment As groupContainer.manualLayoutContainer:
+                Height: =889
+                Visible: =If(rdbModeOfPayment_2.Selected.Value="Cash", true, false)
+                Width: =App.Width
+                Y: =1225
+                ZIndex: =30
+
+                btnNewOrderHeaderProduct_16 As button:
+                    DisabledBorderColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisabledColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.LightText
+                    DisabledFill: |-
+                        =//RGBA(244, 244, 244, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =50
+                    OnSelect: =
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Currency"
+                    Width: =206
+                    X: =5
+                    Y: =40
+                    ZIndex: =1
+
+                btnNewOrderHeaderCases_23 As button:
+                    DisabledBorderColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisabledColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.LightText
+                    DisabledFill: |-
+                        =//RGBA(244, 244, 244, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =50
+                    OnSelect: =
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Qty"
+                    Width: =206
+                    X: =btnNewOrderHeaderProduct_16.X + btnNewOrderHeaderProduct_16.Width +5
+                    Y: =40
+                    ZIndex: =2
+
+                btnNewOrderHeaderPcs_19 As button:
+                    DisabledBorderColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisabledColor: |-
+                        =//RGBA(166, 166, 166, 1)
+                        _VarGblAppColors.LightText
+                    DisabledFill: |-
+                        =//RGBA(244, 244, 244, 1)
+                        _VarGblAppColors.BisleriBlue
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =50
+                    OnSelect: =
+                    Size: =_VarGblAppFonts.Size.Subtitle
+                    Text: ="Amount"
+                    Width: =206
+                    X: =btnNewOrderHeaderCases_23.X + btnNewOrderHeaderCases_23.Width +5
+                    Y: =40
+                    ZIndex: =3
+
+                Gallery1 As gallery.galleryVertical:
+                    AccessibleLabel: ="Gallery1"
+                    Height: =789
+                    Items: |-
+                        =Table(
+                            {Currency:"2000",Sign:"₹"},
+                            {Currency:"500",Sign:"₹"},
+                            {Currency:"200",Sign:"₹"},
+                            {Currency:"100",Sign:"₹"},
+                            {Currency:"50",Sign:"₹"},
+                            {Currency:"20",Sign:"₹"},
+                            {Currency:"10",Sign:"₹"},
+                            {Currency:"5",Sign:"₹"},
+                            {Currency:"2",Sign:"₹"},
+                            {Currency:"1",Sign:"₹"}
+                            )
+                    Layout: =Layout.Vertical
+                    TabIndex: =
+                    TemplateSize: =73
+                    Y: =100
+                    ZIndex: =4
+
+                    Button3 As button:
+                        DisabledFill: =_VarGblAppColors.BisleriBlueLight
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =70
+                        Size: =24
+                        Text: =""
+                        Width: =Gallery1.Width-10
+                        X: =5
+                        Y: =3
+                        ZIndex: =1
+
+                    Label4 As label:
+                        Align: =Align.Center
+                        Height: =55
+                        OnSelect: =Select(Parent)
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: =ThisItem.Currency
+                        Width: =191
+                        X: =17
+                        Y: =10
+                        ZIndex: =2
+
+                    Label4_1 As label:
+                        Align: =Align.Center
+                        Height: =55
+                        OnSelect: =Select(Parent)
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: =ThisItem.Currency*TextInput1.Text
+                        Width: =206
+                        X: =424
+                        Y: =10
+                        ZIndex: =3
+
+                    TextInput1 As text:
+                        AccessibleLabel: ="TextInput1"
+                        BorderColor: =_VarGblAppColors.BisleriBlue
+                        Default: =""
+                        FocusedBorderThickness: =2
+                        Format: =TextFormat.Number
+                        HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                        HoverFill: =_VarGblAppColors.BisleriBlueLight
+                        OnSelect: =Select(Parent)
+                        Reset: =true
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Width: =102
+                        X: =265
+                        Y: =20
+                        ZIndex: =4
+
+                    Label4_2 As label:
+                        Align: =Align.Center
+                        Height: =47
+                        OnSelect: =Select(Parent)
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: =ThisItem.Sign
+                        Width: =20
+                        X: =69
+                        Y: =14
+                        ZIndex: =5
+
+            contChequePayment As groupContainer.manualLayoutContainer:
+                Height: =742
+                Visible: =If(rdbModeOfPayment_2.Selected.Value="Cheque", true, false)
+                Width: =App.Width
+                Y: =1225
+                ZIndex: =31
+
+            contCCouponPayment As groupContainer.manualLayoutContainer:
+                Height: =742
+                Visible: =If(rdbModeOfPayment_2.Selected.Value="Coupon", true, false)
+                Width: =App.Width
+                Y: =1225
+                ZIndex: =32
+
+                BarcodeScanner1 As barcodeScanner:
+                    Color: =_VarGblAppColors.BisleriBlue
+                    Fill: =_VarGblAppColors.BisleriBlueLight
+                    Height: =459
+                    HoverColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =_VarGblAppColors.BisleriBlueLight
+                    Size: =24
+                    Text: ="Scan"
+                    Width: =554
+                    X: =36
+                    Y: =116
+                    ZIndex: =1
+
+    BottomBar_15 As BottomBar:
+        Y: =1026
+        ZIndex: =7
+
+    Rectangle2 As rectangle:
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(0, 0, 0, 0.49)
+        Height: =App.Height
+        Visible: =If(VarPaymentConfirm, true, false)
+        Width: =App.Width
+        ZIndex: =18
+
+    Container2 As groupContainer.manualLayoutContainer:
+        Fill: =White
+        Height: =295
+        Visible: =If(VarPaymentConfirm, true, false)
+        X: =70
+        Y: =421
+        ZIndex: =19
+
+        Label5 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =154
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="Sussessful! ""Thankyou for making payment. Your order has successfully placed"""
+            Width: =500
+            Y: =6
+            ZIndex: =1
+
+        Button4 As button:
+            Fill: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =2
+            Height: =50
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            OnSelect: |-
+                =Set(VarPaymentConfirm, false);
+                Navigate('Visit Screen');
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="Confirm"
+            Width: =150
+            X: =85
+            Y: =205
+            ZIndex: =2
+
+        Button4_3 As button:
+            Fill: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =2
+            Height: =50
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            OnSelect: |-
+                =Set(VarPaymentConfirm, false);
+                Navigate('Payment Screen');
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="Cancel"
+            Width: =150
+            X: =272
+            Y: =205
+            ZIndex: =3
+
+    ReturnPopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        Rectangle8_1 As rectangle:
+            Fill: =RGBA(204, 204, 204, 0.45)
+            Height: =1136
+            Visible: =_VarConfirmReplaceVisits
+            Width: =640
+            ZIndex: =8
+
+        Rectangle10_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =510
+            Visible: =_VarConfirmReplaceVisits
+            Width: =496
+            X: =72
+            Y: =313
+            ZIndex: =9
+
+        Label3_5 As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            Size: =18
+            Text: ="Enter Batch Number "
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =356
+            ZIndex: =10
+
+        TextInput6_3 As text:
+            AccessibleLabel: ="TextInput6_3"
+            BorderColor: =_VarGblAppColors.BisleriBlue
+            Default: =""
+            Height: =44
+            HintText: ="Enter Batch Number"
+            Size: =15
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =402
+            ZIndex: =11
+
+        Label3_4 As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            Size: =18
+            Text: ="Enter Lot Number "
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =478
+            ZIndex: =12
+
+        TextInput6_2 As text:
+            AccessibleLabel: ="TextInput6_2"
+            BorderColor: =_VarGblAppColors.BisleriBlue
+            Default: =""
+            Height: =45
+            HintText: ="Enter Lot Number"
+            Size: =15
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =519
+            ZIndex: =13
+
+        Label3_3 As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            Size: =18
+            Text: ="Select Date of Manufacturing"
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =594
+            ZIndex: =14
+
+        DatePicker2_1 As datepicker:
+            AccessibleLabel: ="DatePicker2_1"
+            BorderColor: =_VarGblAppColors.BisleriBlue
+            IconBackground: =_VarGblAppColors.BisleriBlue
+            Size: =17
+            Visible: =_VarConfirmReplaceVisits
+            Width: =428
+            X: =93
+            Y: =638
+            ZIndex: =15
+
+        Button12_8 As button:
+            Color: =_VarGblAppColors.LightText
+            Fill: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =2
+            Height: =47
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            OnSelect: |
+                =Set(_VarConfirmReplaceVisits, false)
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="     CONFIRM"
+            Visible: =_VarConfirmReplaceVisits
+            Width: =198
+            X: =221
+            Y: =714
+            ZIndex: =16
+
+        Icon1_1 As icon.CancelBadge:
+            AccessibleLabel: ="Icon1_1"
+            BorderColor: =_VarGblAppColors.PrimaryText
+            Color: =_VarGblAppColors.PrimaryText
+            Height: =30
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =Set(_VarConfirmReplaceVisits, false)
+            TabIndex: =0
+            Visible: =_VarConfirmReplaceVisits
+            Width: =30
+            X: =521
+            Y: =327
+            ZIndex: =17
+

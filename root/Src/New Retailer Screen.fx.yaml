@@ -1,0 +1,910 @@
+"'New Retailer Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.BackgroundColor
+    OnVisible: =Set(varKYC, "Info")
+
+    canKYC As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =App.Height-220
+        Width: =Parent.Width
+        Y: =140
+        ZIndex: =3
+
+        dataCardKYC As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1816
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            contKYCInfo As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                Visible: =If(varKYC="Info", true, false)
+                Width: =Parent.Width
+                ZIndex: =1
+
+                lblKYCFirmName As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Name of the Firm"
+                    Width: =560
+                    X: =25
+                    Y: =20
+                    ZIndex: =1
+
+                txtKYCFirmName As text:
+                    AccessibleLabel: ="txtRetailerFirmName"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Firm Name"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =65
+                    ZIndex: =3
+
+                lblKYCRetailerCustType As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Customer Type"
+                    Width: =560
+                    X: =25
+                    Y: =131
+                    ZIndex: =4
+
+                rdbKYCRetailerCustType As radio:
+                    AccessibleLabel: ="rdbRetailerCustType"
+                    FocusedBorderThickness: =0.5
+                    Height: =106
+                    Items: =RadioSample
+                    Layout: =Layout.Horizontal
+                    RadioSelectionFill: =_VarGblAppColors.BisleriBlue
+                    RadioSize: =42
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =172
+                    ZIndex: =5
+
+                lblKYCRetailerName As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Name of the Retailer"
+                    Width: =560
+                    X: =25
+                    Y: =250
+                    ZIndex: =6
+
+                txtKYCRetailerName As text:
+                    AccessibleLabel: ="txtRetailerName"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Name"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =295
+                    ZIndex: =7
+
+                lblKYCPotential As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Business Potential"
+                    Width: =560
+                    X: =25
+                    Y: =362
+                    ZIndex: =8
+
+                txtKYCPotential As text:
+                    AccessibleLabel: ="txtRetailerPotential"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Potential"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =407
+                    ZIndex: =9
+
+                lblKYCMobile As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Mobile No."
+                    Width: =560
+                    X: =25
+                    Y: =477
+                    ZIndex: =10
+
+                txtKYCMobile As text:
+                    AccessibleLabel: ="txtRetailerMobile"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Mobile"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =522
+                    ZIndex: =11
+
+                lblKYCBirthDate As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Date of Birth"
+                    Width: =257
+                    X: =25
+                    Y: =597
+                    ZIndex: =12
+
+                lblKYCEstablishmentYear As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Year of Estanlishment"
+                    Width: =304
+                    X: =320
+                    Y: =597
+                    ZIndex: =13
+
+                dteKYCBirthDate As datepicker:
+                    AccessibleLabel: ="dtpRetailerBirthDate"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    IconBackground: =_VarGblAppColors.BisleriBlue
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =240
+                    X: =25
+                    Y: =650
+                    ZIndex: =14
+
+                dteKYCEstablishmentYear As datepicker:
+                    AccessibleLabel: ="dtpRetailerEstablishmentYear"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    IconBackground: =_VarGblAppColors.BisleriBlue
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =240
+                    X: =335
+                    Y: =650
+                    ZIndex: =15
+
+                lblKYCEmail As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Email"
+                    Width: =560
+                    X: =25
+                    Y: =730
+                    ZIndex: =16
+
+                txtKYCEmail As text:
+                    AccessibleLabel: ="txtRetailerEmail"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Email"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =775
+                    ZIndex: =17
+
+                lblKYCAddress As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Address 1"
+                    Width: =560
+                    X: =25
+                    Y: =862
+                    ZIndex: =18
+
+                txtKYCAddress As text:
+                    AccessibleLabel: ="txtRetailerAddress"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Address"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =907
+                    ZIndex: =19
+
+                lblKYCAddress2 As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Address 2"
+                    Width: =230
+                    X: =25
+                    Y: =983
+                    ZIndex: =20
+
+                txtKYCAddress2 As text:
+                    AccessibleLabel: ="txtRetailerAddress2"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Address"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =25
+                    Y: =1028
+                    ZIndex: =21
+
+                lblKYCPostCode As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Post Code"
+                    Width: =230
+                    X: =345
+                    Y: =983
+                    ZIndex: =22
+
+                txtKYCPostCode As text:
+                    AccessibleLabel: ="txtRetailerPostCode"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Post Code"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =345
+                    Y: =1028
+                    ZIndex: =23
+
+                lblKYCZone As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Zone"
+                    Width: =230
+                    X: =25
+                    Y: =1113
+                    ZIndex: =24
+
+                txtKYCZone As text:
+                    AccessibleLabel: ="txtRetailerZone"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Zone"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =25
+                    Y: =1158
+                    ZIndex: =25
+
+                lblKYCState As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="State"
+                    Width: =230
+                    X: =345
+                    Y: =1113
+                    ZIndex: =26
+
+                txtKYCState As text:
+                    AccessibleLabel: ="txtRetailerState"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter State"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =345
+                    Y: =1158
+                    ZIndex: =27
+
+                lblKYCSubState As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Sub-State"
+                    Width: =230
+                    X: =25
+                    Y: =1232
+                    ZIndex: =28
+
+                txtKYCSubState As text:
+                    AccessibleLabel: ="txtRetailerSubState"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Sub-State"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =25
+                    Y: =1277
+                    ZIndex: =29
+
+                lblKYCDistrict As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="District"
+                    Width: =230
+                    X: =345
+                    Y: =1232
+                    ZIndex: =30
+
+                txtKYCDistrict As text:
+                    AccessibleLabel: ="txtRetailerDistrict"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter District"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =345
+                    Y: =1277
+                    ZIndex: =31
+
+                lblKYCCity As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="City"
+                    Width: =230
+                    X: =25
+                    Y: =1347
+                    ZIndex: =32
+
+                lblKYCArea As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Area"
+                    Width: =230
+                    X: =345
+                    Y: =1347
+                    ZIndex: =33
+
+                cmbKYCCity As combobox:
+                    AccessibleLabel: ="cmbRetailerCity"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    ChevronBackground: =_VarGblAppColors.BisleriBlue
+                    ChevronHoverBackground: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    Items: =ComboBoxSample
+                    PressedFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    SearchItems: =Search(ComboBoxSample,cmbKYCCity.SearchText,"Value1")
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =25
+                    Y: =1400
+                    ZIndex: =34
+
+                cmbKYCArea As combobox:
+                    AccessibleLabel: ="cmbRetailerArea"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    ChevronBackground: =_VarGblAppColors.BisleriBlue
+                    ChevronHoverBackground: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    Items: =ComboBoxSample
+                    PressedFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    SearchItems: =Search(ComboBoxSample,cmbKYCArea.SearchText,"Value1")
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =345
+                    Y: =1400
+                    ZIndex: =35
+
+                lblKYCShopImage As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: |-
+                        ="Shop Image :"
+                    Width: =200
+                    X: =55
+                    Y: =1583
+                    ZIndex: =36
+
+                camKYCShopImage As camera:
+                    AccessibleLabel: ="camRetailerShop"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    BorderStyle: =BorderStyle.Dashed
+                    BorderThickness: =3
+                    Camera: =0
+                    Height: =175
+                    Width: =237
+                    X: =277
+                    Y: =1529
+                    ZIndex: =37
+
+            contKYCFinancial As groupContainer.manualLayoutContainer:
+                Height: =Parent.Height
+                Visible: =If(varKYC="Financial", true, false)
+                Width: =Parent.Width
+                ZIndex: =2
+
+                lblKYCCibilScore As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Cibil Score"
+                    Width: =560
+                    X: =25
+                    Y: =168
+                    ZIndex: =1
+
+                txtKYCCibilScore As text:
+                    AccessibleLabel: ="txtRetailerCibilScore"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Cibil Score"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =213
+                    ZIndex: =2
+
+                lblKYCTurnover As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Gross Turnover (Per Annum)"
+                    Width: =560
+                    X: =25
+                    Y: =40
+                    ZIndex: =3
+
+                rdbKYCTurnover As radio:
+                    AccessibleLabel: ="rdbRetailerTurnover"
+                    FocusedBorderThickness: =0.5
+                    Height: =106
+                    Items: =RadioSample
+                    Layout: =Layout.Horizontal
+                    RadioSelectionFill: =_VarGblAppColors.BisleriBlue
+                    RadioSize: =42
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =80
+                    ZIndex: =4
+
+                lblKYCGSTRegistrationType As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="GST Registration Type"
+                    Width: =560
+                    X: =25
+                    Y: =297
+                    ZIndex: =5
+
+                cmbKYCGSTRegistrationType As combobox:
+                    AccessibleLabel: ="cmbGSTRegistrationType"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    ChevronBackground: =_VarGblAppColors.BisleriBlue
+                    ChevronHoverBackground: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    InputTextPlaceholder: ="Registration Type"
+                    Items: =ComboBoxSample
+                    PressedFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    SearchItems: =Search(ComboBoxSample,cmbKYCGSTRegistrationType.SearchText,"Value1")
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =350
+                    ZIndex: =6
+
+                lblKYCGSTNo As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="GST No."
+                    Width: =560
+                    X: =25
+                    Y: =435
+                    ZIndex: =7
+
+                txtKYCGSTNo As text:
+                    AccessibleLabel: ="txtRetailerGST"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter GST No."
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =480
+                    ZIndex: =8
+
+                lblKYCPANNo As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="PAN No."
+                    Width: =560
+                    X: =25
+                    Y: =552
+                    ZIndex: =9
+
+                txtKYCPANNo As text:
+                    AccessibleLabel: ="txtKYCPANNo"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter PAN No."
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =597
+                    ZIndex: =10
+
+                lblKYCAadhaarNo As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Aadhaar No."
+                    Width: =560
+                    X: =25
+                    Y: =682
+                    ZIndex: =11
+
+                txtKYCAadhaarNo As text:
+                    AccessibleLabel: ="txtKYCAadhaarNo"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Aadhaar No."
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =727
+                    ZIndex: =12
+
+            contKYCBankDetails As groupContainer.manualLayoutContainer:
+                Height: =1143
+                Visible: =If(varKYC="Bank Details", true, false)
+                Width: =Parent.Width
+                ZIndex: =3
+
+                lblKYCBankAccountNo As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Bank Account No."
+                    Width: =560
+                    X: =25
+                    Y: =40
+                    ZIndex: =1
+
+                txtKYCBankAccountNo As text:
+                    AccessibleLabel: ="txtKYCBankAccountNo"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Account No."
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =85
+                    ZIndex: =2
+
+                lblKYCIFSCCode As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="IFSC Code"
+                    Width: =230
+                    X: =25
+                    Y: =162
+                    ZIndex: =3
+
+                txtKYCIFSCCode As text:
+                    AccessibleLabel: ="txtKYCIFSCCode"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter IFSC Code"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =25
+                    Y: =207
+                    ZIndex: =4
+
+                lblKYCBankCode As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Bank Code"
+                    Width: =230
+                    X: =358
+                    Y: =162
+                    ZIndex: =5
+
+                txtKYCBankCode As text:
+                    AccessibleLabel: ="txtKYCBankCode"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Bank Code"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =230
+                    X: =358
+                    Y: =207
+                    ZIndex: =6
+
+                lblKYCBankName As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Bank Name"
+                    Width: =560
+                    X: =25
+                    Y: =283
+                    ZIndex: =7
+
+                txtKYCBankName As text:
+                    AccessibleLabel: ="txtKYCBankName"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Bank Name"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =328
+                    ZIndex: =8
+
+                lblKYCBankAddress As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Bank Address"
+                    Width: =560
+                    X: =25
+                    Y: =395
+                    ZIndex: =9
+
+                txtKYCBankAddress As text:
+                    AccessibleLabel: ="txtKYCBankAddress"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Bank Address"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =440
+                    ZIndex: =10
+
+                lblKYCDepositAmount As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Deposit Amount"
+                    Width: =560
+                    X: =25
+                    Y: =513
+                    ZIndex: =11
+
+                txtKYCDepositAmount As text:
+                    AccessibleLabel: ="txtKYCDepositAmount"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Deposit Amount"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =558
+                    ZIndex: =12
+
+                lblKYCCreditLimit As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Recommended Credit Limit(In Rs.)"
+                    Width: =560
+                    X: =25
+                    Y: =633
+                    ZIndex: =13
+
+                txtKYCCreditLimitValue As text:
+                    AccessibleLabel: ="txtKYCCreditLimitValue"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Ammount"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =678
+                    ZIndex: =14
+
+                lblKYCNearestDistributor As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Name of Nearest Distributor"
+                    Width: =560
+                    X: =25
+                    Y: =760
+                    ZIndex: =15
+
+                txtKYCNearestDistributor As text:
+                    AccessibleLabel: ="txtKYCNearestDistributor"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Details"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =805
+                    ZIndex: =16
+
+                lblKYCRemark As label:
+                    FontWeight: =FontWeight.Bold
+                    Size: =_VarGblAppFonts.Size.Title
+                    Text: ="Remarks"
+                    Width: =560
+                    X: =25
+                    Y: =901
+                    ZIndex: =17
+
+                txtKYCRemarkValue As text:
+                    AccessibleLabel: ="txtKYCRemarkValue"
+                    BorderColor: =_VarGblAppColors.BisleriBlue
+                    Default: =""
+                    DisplayMode: =If(_varEditProfile=true,DisplayMode.Edit, DisplayMode.View)
+                    FocusedBorderThickness: =2
+                    Height: =45
+                    HintText: ="Enter Remarks"
+                    HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Width: =560
+                    X: =25
+                    Y: =946
+                    ZIndex: =18
+
+    compKYCHeader As Header:
+        HeaderText: ="KYC Form"
+        ZIndex: =4
+
+    galKYCFilter As gallery.galleryHorizontal:
+        AccessibleLabel: ="galRetailerOnboard"
+        BorderColor: =_VarGblAppColors.BisleriBlue
+        Height: =60
+        Items: =["Info","Financial","Bank Details"]
+        ShowScrollbar: =false
+        TabIndex: |
+            =0
+        TemplateSize: =207
+        Y: =85
+        ZIndex: =6
+
+        btnGalKYCFilter As button:
+            Color: =If(varKYC=ThisItem.Value, _VarGblAppColors.LightText, _VarGblAppColors.PrimaryBg)
+            Fill: =If(varKYC=ThisItem.Value, _VarGblAppColors.BisleriBlue, _VarGblAppColors.LightText)
+            FocusedBorderThickness: =2
+            HoverColor: =_VarGblAppColors.PrimaryBg
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+            OnSelect: =Set(varKYC, ThisItem.Value)
+            PressedColor: =_VarGblAppColors.LightText
+            PressedFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            Size: =_VarGblAppFonts.Size.Medium
+            Text: =ThisItem.Value
+            Width: =197
+            ZIndex: =1
+
+    compKYCBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =7
+
+    btnKYCSave As button:
+        Color: =_VarGblAppColors.BisleriBlue
+        Fill: =_VarGblAppColors.LightText
+        FocusedBorderThickness: =2
+        HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+        OnSelect: |-
+            =/*Patch(Accounts, Defaults(Accounts), {
+                'Account Name': "Vaishali Jindal Testing",
+                'Main Phone': "9876543210"
+            });*/
+            Patch(Customers, Defaults(Customers), {
+                Name: "cbv"
+            });
+            Navigate('Retailer Onboarding Screen');
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: ="Save"
+        Width: =150
+        X: =388
+        Y: =20
+        ZIndex: =8
+

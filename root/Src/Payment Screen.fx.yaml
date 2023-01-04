@@ -1,0 +1,356 @@
+"'Payment Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.LightText
+
+    galPaymentSummary As gallery.galleryVertical:
+        AccessibleLabel: ="galPaymentSummary"
+        Height: =764
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateSize: =205
+        Width: =Parent.Width
+        Y: =287
+        ZIndex: =2
+
+        htmPaymentSummary As htmlViewer:
+            Color: =RGBA(242, 242, 242, 1)
+            Height: =270
+            HtmlText: |-
+                ="<div style='border-radius:15px 15px 15px 15px; background-color:#E6F7F6; width:590px; height:195px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =610
+            X: =15
+            ZIndex: =2
+
+        btnPaymentSummaryModeOfPayment As button:
+            DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+            DisabledColor: =_VarGblAppColors.HeaderBg
+            DisabledFill: =_VarGblAppColors.LightText
+            DisplayMode: =DisplayMode.Disabled
+            Height: =34
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =_VarGblAppFonts.Size.Regular
+            Text: ="Cheque"
+            Width: =92
+            X: =458
+            Y: =20
+            ZIndex: =3
+
+        icoPaymentSummaryCustomerPhone As icon.Phone:
+            Color: =_VarGblAppColors.GreenColor
+            Height: =40
+            Icon: =Icon.Phone
+            OnSelect: =Select(Parent)
+            Width: =40
+            X: =561
+            Y: =20
+            ZIndex: =4
+
+        shpPaymentSummaryCustomerFirstLetter As circle:
+            Fill: =RGBA(256*Rand(), 256*Rand(), 256*Rand(), 0.3)
+            Height: =60
+            OnSelect: =Select(Parent)
+            Width: =60
+            X: =30
+            Y: =15
+            ZIndex: =5
+
+        lblPaymentSummaryCustomerFirstLetter As label:
+            Align: =Align.Center
+            Color: =_VarGblAppColors.BisleriBlue
+            Fill: =Transparent
+            FontWeight: =FontWeight.Bold
+            Height: =50
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="A"
+            Width: =50
+            X: =35
+            Y: =20
+            ZIndex: =6
+
+        lblPaymentSummaryCustomerName As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =0.5
+            FontWeight: =FontWeight.Bold
+            Height: =50
+            OnSelect: =Navigate(PaymentInfoScreen)
+            Size: =_VarGblAppFonts.Size.Title
+            TabIndex: =0
+            Text: ="Anil Sharma Co."
+            Width: =390
+            X: =95
+            Y: =14
+            ZIndex: =7
+
+        lblPaymentSummaryAddress As label:
+            Color: =_VarGblAppColors.HeaderBg
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Regular
+            Text: ="Sector 168, Noida"
+            Width: =350
+            X: =108
+            Y: =54
+            ZIndex: =8
+
+        lblPaymentSummaryTotalAmt As label:
+            Color: =_VarGblAppColors.HeaderBg
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: |-
+                ="Total Amount:"
+            X: =379
+            Y: =105
+            ZIndex: =10
+
+        lblPaymentSummaryTotalAmtValue As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: ="₹ 1500"
+            Width: =87
+            X: =514
+            Y: =105
+            ZIndex: =11
+
+        lblPaymentSummaryRoute As label:
+            Color: =_VarGblAppColors.HeaderBg
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: |-
+                ="Route :"
+            Width: =80
+            X: =30
+            Y: =105
+            ZIndex: =13
+
+        lblPaymentSummaryRouteValue As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: ="RI2223R260005477"
+            Width: =200
+            X: =119
+            Y: =105
+            ZIndex: =14
+
+        lblPaymentSummaryInvoice As label:
+            Color: =_VarGblAppColors.HeaderBg
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: |-
+                ="Invoice No. :"
+            Width: =120
+            X: =30
+            Y: =150
+            ZIndex: =16
+
+        lblPaymentSummaryInvoiceValue As label:
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Subtitle
+            Text: ="RI2223R260005477"
+            Width: =315
+            X: =160
+            Y: =150
+            ZIndex: =17
+
+    galPaymentDateFilter As gallery.galleryHorizontal:
+        AccessibleLabel: ="galPaymentDateFilter"
+        Height: =60
+        Items: =["Today's Payment","Last 30 Days","Last 7 Days"]
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateSize: =207
+        Width: =627
+        X: =7
+        Y: =85
+        ZIndex: =4
+
+        btnPaymentDateFilter As button:
+            Color: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlueLight,_VarGblAppColors.BisleriBlue)
+            Fill: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlue,_VarGblAppColors.BisleriBlueLight)
+            Height: =42
+            HoverFill: =ColorFade(Self.Color, 10%)
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Regular
+            Text: =ThisItem.Value
+            Width: =195
+            ZIndex: =1
+
+    galPaymentTypeFilter As gallery.galleryHorizontal:
+        AccessibleLabel: ="galPaymentTypeFilter"
+        Height: =60
+        Items: =["All","Cash","Cheque","Coupon"]
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateSize: =150
+        Width: =625
+        X: =6
+        Y: =140
+        ZIndex: =5
+
+        btnPaymentTypeFilter As button:
+            Color: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlueLight,_VarGblAppColors.BisleriBlue)
+            Fill: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlue,_VarGblAppColors.BisleriBlueLight)
+            FocusedBorderThickness: =2
+            Height: =42
+            HoverFill: =ColorFade(Self.Color, 10%)
+            OnSelect: =Select(Parent)
+            Size: =_VarGblAppFonts.Size.Regular
+            Text: =ThisItem.Value
+            Width: =147
+            ZIndex: =1
+
+    compPaymentsHeader As Header:
+        HeaderText: ="Payments"
+        ZIndex: =6
+
+    btnPaymentsNewPayment As button:
+        Color: =_VarGblAppColors.BisleriBlue
+        Fill: =_VarGblAppColors.LightText
+        FocusedBorderThickness: =2
+        Height: =34
+        HoverColor: =_VarGblAppColors.BisleriBlue
+        HoverFill: =_VarGblAppColors.BisleriBlueLight
+        OnSelect: =Navigate('New Payment Screen');
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="New"
+        Width: =101
+        X: =427
+        Y: =23
+        ZIndex: =7
+
+    compPaymentsBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =8
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Button5 As button:
+            DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+            DisabledFill: =_VarGblAppColors.BisleriBlue
+            DisplayMode: =DisplayMode.Disabled
+            Height: =75
+            Size: =24
+            Text: =""
+            Width: =242
+            X: =54
+            Y: =200
+            ZIndex: =9
+
+        Button5_2 As button:
+            DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+            DisabledFill: =White
+            DisplayMode: =DisplayMode.Disabled
+            Height: =75
+            Size: =24
+            Text: =""
+            Width: =232
+            X: =64
+            Y: =200
+            ZIndex: =11
+
+        Label6 As label:
+            Align: =Align.Center
+            Color: =_VarGblAppColors.PrimaryText
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="Total Count"
+            Width: =214
+            X: =72
+            Y: =200
+            ZIndex: =13
+
+        Label6_2 As label:
+            Align: =Align.Center
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="10"
+            Width: =214
+            X: =72
+            Y: =236
+            ZIndex: =15
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Button5_1 As button:
+            DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+            DisabledFill: =_VarGblAppColors.BisleriBlue
+            DisplayMode: =DisplayMode.Disabled
+            Height: =75
+            Size: =24
+            Text: =""
+            Width: =242
+            X: =344
+            Y: =200
+            ZIndex: =16
+
+        Button5_3 As button:
+            DisabledBorderColor: =_VarGblAppColors.BisleriBlue
+            DisabledFill: =White
+            DisplayMode: =DisplayMode.Disabled
+            Height: =75
+            Size: =24
+            Text: =""
+            Width: =232
+            X: =354
+            Y: =200
+            ZIndex: =17
+
+        Label6_1 As label:
+            Align: =Align.Center
+            Color: =_VarGblAppColors.PrimaryText
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="Total Amount"
+            Width: =214
+            X: =362
+            Y: =200
+            ZIndex: =18
+
+        Label6_3 As label:
+            Align: =Align.Center
+            Color: =_VarGblAppColors.BisleriBlue
+            FontWeight: =FontWeight.Bold
+            Height: =39
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="₹" & "2,00,000"
+            Width: =214
+            X: =362
+            Y: =236
+            ZIndex: =19
+

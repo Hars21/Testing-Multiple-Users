@@ -1,0 +1,347 @@
+ReturnOrderComp As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =App.Height
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    contReturnOrderUpperVertical As groupContainer.verticalAutoLayoutContainer:
+        Fill: =Transparent
+        Height: =811
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: |-
+            =//Parent.Width
+            640
+        Y: =20
+        ZIndex: =2
+
+        contReturnOrderUpper As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =Transparent
+            Height: =978
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            Width: =Parent.Width
+            ZIndex: =1
+
+            contReturnOrderLowerVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: =App.Height + 50
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowX: =LayoutOverflow.Scroll
+                Width: =640
+                Y: =6
+                ZIndex: =1
+
+                contReturnOrderHeading As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =750
+                    Width: =App.Width
+                    ZIndex: =1
+
+                    btnReturnOrderHeadingProduct As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Product"
+                        Width: =260
+                        X: =4
+                        ZIndex: =1
+
+                    btnReturnOrderHeadingCases As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Cases"
+                        Width: =118
+                        X: =btnReturnOrderHeadingProduct.X+btnReturnOrderHeadingProduct.Width+5
+                        ZIndex: =2
+
+                    btnReturnOrderHeadingPcs As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Pcs"
+                        Width: =118
+                        X: =btnReturnOrderHeadingCases.X+btnReturnOrderHeadingCases.Width+5
+                        ZIndex: =3
+
+                    btnReturnOrderHeadingReason As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Reason"
+                        Width: =118
+                        X: =btnReturnOrderHeadingPcs.X+btnReturnOrderHeadingPcs.Width+5
+                        ZIndex: =4
+
+                contReturnOrderData As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =287
+                    LayoutMinHeight: =570
+                    LayoutMinWidth: =App.Width
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =contReturnOrderHeading.Width
+                    ZIndex: =2
+
+                    galReturnOrderData As gallery.galleryVertical:
+                        AccessibleLabel: ="galReturnOrderData"
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: =Transparent
+                        FillPortions: =0
+                        Items: ='Items Masters'
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =1300
+                        ShowScrollbar: =false
+                        TabIndex: =0
+                        TemplateSize: =80
+                        ZIndex: =1
+
+                        btnReturnOrderDataBackground As button:
+                            DisabledFill: |-
+                                =//RGBA(244, 244, 244, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, 80%)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =galReturnOrderData.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =24
+                            Text: =""
+                            Width: =630
+                            ZIndex: =1
+
+                        lblReturnOrderDataProductCode As label:
+                            Align: =Align.Center
+                            Color: =_VarGblAppColors.BisleriBlue
+                            FontWeight: =FontWeight.Semibold
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Regular
+                            Text: =ThisItem.Name
+                            Width: =261
+                            ZIndex: =2
+
+                        txtReturnOrderDataCasesValue As text:
+                            AccessibleLabel: ="txtReturnOrderDataCasesValue"
+                            BorderColor: |-
+                                =//RGBA(0, 18, 107, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                            HoverFill: |-
+                                =//RGBA(186, 202, 226, 1)
+                                ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =80
+                            X: =287
+                            Y: =23
+                            ZIndex: =6
+
+                        txtReturnOrderDataPcsValue As text:
+                            AccessibleLabel: ="txtReturnOrderDataPcsValue"
+                            BorderColor: |-
+                                =//RGBA(0, 18, 107, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                            HoverFill: |-
+                                =//RGBA(186, 202, 226, 1)
+                                ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =80
+                            X: =410
+                            Y: =23
+                            ZIndex: =7
+
+                        shpReturnOrderDataGalRect3 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galReturnOrderData.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =btnReturnOrderHeadingProduct.Width+5
+                            ZIndex: =9
+
+                        shpReturnOrderDataGalRect2 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galReturnOrderData.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =btnReturnOrderHeadingCases.Width+btnReturnOrderHeadingCases.X
+                            ZIndex: =10
+
+                        shpReturnOrderDataGalRect1 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galReturnOrderData.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =btnReturnOrderHeadingPcs.Width+btnReturnOrderHeadingPcs.X
+                            ZIndex: =11
+
+                        btnReturnOrderSelectReason As button:
+                            Fill: =_VarGblAppColors.BisleriBlue
+                            Height: =27
+                            HoverFill: =ColorFade(Self.Color, -20%)
+                            OnSelect: |-
+                                =Set(VarDropdownShow, !VarDropdownShow)
+                                //Set(VarDropdownShow, ThisItem)
+                            Size: =16
+                            Text: ="Select"
+                            Width: =100
+                            X: =520
+                            Y: =30
+                            ZIndex: =13
+
+                        drpReturnOrderReasonList As dropdown:
+                            AccessibleLabel: ="drpReturnOrderReasonList"
+                            BorderColor: =RGBA(109, 109, 109, 1)
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(117, 116, 116, 1)
+                            ChevronHoverBackground: =RGBA(79, 79, 79, 1)
+                            ChevronHoverFill: =RGBA(218, 218, 218, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =50
+                            HoverBorderColor: =ColorFade(RGBA(255, 200, 61, 1), 30%)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(79, 79, 79, 1)
+                            Items: =["Return", "Leakage", "Expiry", "Color Change"]
+                            OnChange: |-
+                                =/*Patch(
+                                    ReturnRequestLines,
+                                    LookUp(
+                                        ReturnRequestLines,
+                                        product.'Product Item' = ThisItem.'Product Item'
+                                    ),
+                                    {reason: Dropdown2_6.Selected.Value}
+                                );
+                                Set(
+                                    _varReasontrue,
+                                    Blank()
+                                )*/
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =ColorFade(RGBA(255, 200, 61, 1), 30%)
+                            PressedColor: =RGBA(31, 31, 31, 1)
+                            PressedFill: =RGBA(255, 200, 61, 1)
+                            SelectionColor: =RGBA(31, 31, 31, 1)
+                            SelectionFill: =RGBA(255, 200, 61, 1)
+                            Size: =18
+                            Visible: =If(ThisItem.IsSelected, VarDropdownShow, false) 
+                            Width: =315
+                            X: =277
+                            Y: =5
+                            ZIndex: =14
+
+                        lblReturnOrderProductDescription As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Tiny
+                            Text: =ThisItem.'Item Description'
+                            Width: =261
+                            X: =btnReturnOrderHeadingProduct.X
+                            Y: =30
+                            ZIndex: =15
+
+    grpReturnOrder As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =5
+
+        btnReturnOrderProceed As button:
+            Color: =_VarGblAppColors.LightText
+            Fill: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =2
+            Height: =49
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            OnSelect: =Set(_VarConfirmReplaceVisits, !_VarConfirmReplaceVisits)
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="     PROCEED"
+            Tooltip: ="grpReturnOrder"
+            Width: =223
+            X: =387
+            Y: =835
+            ZIndex: =3
+
+        icnGrpReturnOrder As icon.OpenInNewWindow:
+            AccessibleLabel: ="icnGrpReturnOrder"
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =36
+            Icon: =Icon.OpenInNewWindow
+            OnSelect: =Set(_VarConfirmReplaceVisits, !_VarConfirmReplaceVisits)
+            PaddingBottom: =7
+            PaddingLeft: =6
+            PaddingRight: =7
+            PaddingTop: =7
+            TabIndex: =0
+            Tooltip: ="grpReturnOrder"
+            Width: =36
+            X: =399
+            Y: =848
+            ZIndex: =4
+

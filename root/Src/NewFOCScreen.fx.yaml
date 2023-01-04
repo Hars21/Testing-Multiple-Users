@@ -1,0 +1,421 @@
+"NewFOCScreen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.LightText
+
+    Canvas1_3 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =App.Height-175
+        Width: =Parent.Width
+        Y: =120
+        ZIndex: =1
+
+        DataCard1_3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    contFOCUpperVertical As groupContainer.verticalAutoLayoutContainer:
+        Height: =909
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: |-
+            =//Parent.Width
+            640
+        Y: =150
+        ZIndex: =2
+
+        contFOCUpper As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =910
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            Width: =Parent.Width
+            ZIndex: =1
+
+            contFOCLowerVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: =940
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowX: =LayoutOverflow.Scroll
+                Width: =640
+                Y: =6
+                ZIndex: =1
+
+                contFOCHeading As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =750
+                    Width: =App.Width
+                    ZIndex: =1
+
+                    btnNewOrderHeaderProduct_12 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Product"
+                        Width: =300
+                        X: =5
+                        Y: =5
+                        ZIndex: =1
+
+                    btnNewOrderHeaderCases_12 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Price"
+                        Width: =105
+                        X: =btnNewOrderHeaderProduct_12.X + btnNewOrderHeaderProduct_12.Width +5
+                        Y: =5
+                        ZIndex: =2
+
+                    btnNewOrderHeaderPcs_13 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Cases"
+                        Width: =105
+                        X: =btnNewOrderHeaderCases_12.X + btnNewOrderHeaderCases_12.Width +5
+                        Y: =5
+                        ZIndex: =3
+
+                    btnNewOrderHeaderPcs_14 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Pcs"
+                        Width: =105
+                        X: =btnNewOrderHeaderPcs_13.X+btnNewOrderHeaderPcs_13.Width+5
+                        Y: =5
+                        ZIndex: =4
+
+                contFOCData As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =575
+                    LayoutMinHeight: =570
+                    LayoutMinWidth: =640
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =App.Width
+                    ZIndex: =2
+
+                    galFOCData As gallery.galleryVertical:
+                        AccessibleLabel: ="galFOCData"
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: |-
+                            =//RGBA(0, 0, 0, 0)
+                            _VarGblAppColors.LightText
+                        FillPortions: =0
+                        Height: =500
+                        Items: |-
+                            =Table(
+                                {
+                                    Title: "Bisleri Fonzo",
+                                   Price: "₹100",
+                                    QtyCases: "",
+                                    QtyPcs: "",
+                                    QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri 20 liter WaterCan",
+                                    Price: "₹120",
+                                    QtyCases: "",
+                                    QtyPcs: "",
+                                     QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri 500ml Bottle",
+                                    Price: "₹135",
+                                    QtyCases: "",
+                                   QtyPcs: "",
+                                   QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri Club Soda",
+                                    Price: "₹190",
+                                    QtyCases: "",
+                                    QtyPcs: "",
+                                    QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri Vedica",
+                                    Price: "₹200",
+                                    QtyCases: "",
+                                    QtyPcs: "",
+                                    QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri Spyci",
+                                    Price: "₹155",
+                                    QtyCases: "",
+                                    QtyPcs: "",
+                                    QtyPacks: ""
+                                },
+                                 {
+                                    Title: "Bisleri Hand Purifiers",
+                                    Price: "₹175",
+                                   QtyCases: "",
+                                    QtyPcs: "",
+                                    QtyPacks: ""
+                                }
+                            )
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =1200
+                        ShowScrollbar: =false
+                        TabIndex: =0
+                        TemplateSize: =60
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        btnFOCBackground As button:
+                            DisabledBorderColor: =_VarGblAppColors.BisleriBlueMediumLight
+                            DisabledFill: =_VarGblAppColors.BisleriBlueLight
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            Size: =24
+                            Text: =""
+                            Width: =Parent.Width-10
+                            ZIndex: =1
+
+                        lblFOCProductName As label:
+                            Align: =Align.Center
+                            Height: =50
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Text: =ThisItem.Title
+                            Width: =300
+                            Y: =6
+                            ZIndex: =2
+
+                        lblFOCPriceValue As label:
+                            Align: =Align.Center
+                            Fill: |-
+                                =RGBA(0, 0, 0, 0)
+                                //_VarGblAppColors.LightText
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Text: =ThisItem.Price
+                            Width: =80
+                            X: =324
+                            Y: =10
+                            ZIndex: =3
+
+                        txtFOCCasesValue As text:
+                            AccessibleLabel: ="txtFOCCasesValue"
+                            BorderColor: =_VarGblAppColors.BisleriBlue
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                            HoverFill: =_VarGblAppColors.BisleriBlueLight
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =80
+                            X: =430
+                            Y: =10
+                            ZIndex: =4
+
+                        txtFOCPcsValue As text:
+                            AccessibleLabel: ="txtFOCPcsValue"
+                            BorderColor: =_VarGblAppColors.BisleriBlue
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                            HoverFill: =_VarGblAppColors.BisleriBlueLight
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =80
+                            X: =539
+                            Y: =10
+                            ZIndex: =5
+
+                        shpFOCDataPart3 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =301
+                            ZIndex: =8
+
+                        shpFOCDataPart2 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =412
+                            ZIndex: =9
+
+                        shpFOCDataPart1 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =522
+                            ZIndex: =10
+
+            lblFOCReason As label:
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: |-
+                    ="Reason :"
+                Width: =97
+                X: =69
+                Y: =585
+                ZIndex: =2
+
+            drpFOCReasons As dropdown:
+                AccessibleLabel: ="drpFOCReasons"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                ChevronBackground: =_VarGblAppColors.BisleriBlue
+                ChevronFill: =_VarGblAppColors.LightText
+                ChevronHoverBackground: =_VarGblAppColors.BisleriBlue
+                ChevronHoverFill: =_VarGblAppColors.LightText
+                FocusedBorderThickness: =2
+                HoverColor: =_VarGblAppColors.HeaderBg
+                HoverFill: =_VarGblAppColors.BisleriBlueLight
+                Items: =["Breakage", "Complaint", "Complimentory", "Self Consumption", "Deposit", "Display", "Display Incentive", "DTH Sheme", "Expired Goods Can/Pet", "IDC Transfer", "Job Work", "Pop Scheme", "Replacement", "Returnable", "Route Replacement", "RTO"]
+                PressedColor: =_VarGblAppColors.LightText
+                PressedFill: =_VarGblAppColors.BisleriBlueMediumLight
+                SelectionColor: =_VarGblAppColors.HeaderBg
+                SelectionFill: =_VarGblAppColors.BisleriBlueLight
+                Size: =_VarGblAppFonts.Size.Medium
+                Width: =400
+                X: =174
+                Y: =585
+                ZIndex: =3
+
+            btnFOCConfirm As button:
+                Color: =_VarGblAppColors.LightText
+                Fill: =_VarGblAppColors.BisleriBlue
+                Height: =50
+                HoverColor: =_VarGblAppColors.HeaderBg
+                HoverFill: =_VarGblAppColors.BisleriBlueMediumLight
+                OnSelect: =Set(VarFOCConfirmation, true)
+                Size: =_VarGblAppFonts.Size.Medium
+                Text: ="Confirm"
+                Width: =120
+                X: =260
+                Y: =660
+                ZIndex: =4
+
+    compFOCSearch As SearchComp:
+        SearchHintText: ="Search by product name"
+        X: =27
+        Y: =80
+        ZIndex: =3
+
+    compFOCHeader As Header:
+        HeaderText: ="FOC Orders"
+        ZIndex: =12
+
+    shpFOCFinalConfirmation As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.41)
+        Height: =App.Height
+        Visible: =If(VarFOCConfirmation, true, false)
+        Width: =App.Width
+        ZIndex: =13
+
+    contFOCFinalConfirmation As groupContainer.manualLayoutContainer:
+        Fill: =_VarGblAppColors.LightText
+        Height: =257
+        Visible: =If(VarFOCConfirmation, true, false)
+        Width: =517
+        X: =62
+        Y: =387
+        ZIndex: =14
+
+        btnFOCFinalConfirmationYes As button:
+            Fill: =_VarGblAppColors.BisleriBlue
+            HoverColor: =_VarGblAppColors.HeaderBg
+            HoverFill: =_VarGblAppColors.BisleriBlueMediumLight
+            OnSelect: =Set(VarFOCConfirmation, false)
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="Yes"
+            Width: =120
+            X: =108
+            Y: =197
+            ZIndex: =1
+
+        btnFOCFinalConfirmationNo As button:
+            Fill: =_VarGblAppColors.BisleriBlue
+            HoverColor: =_VarGblAppColors.HeaderBg
+            HoverFill: =_VarGblAppColors.BisleriBlueMediumLight
+            OnSelect: =Set(VarFOCConfirmation, false)
+            Size: =_VarGblAppFonts.Size.UpperMedium
+            Text: ="No"
+            Width: =120
+            X: =287
+            Y: =197
+            ZIndex: =2
+
+        lblFOCFinalConfirmationMessage As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =124
+            Size: =21
+            Text: ="Do you want to Continue ?"
+            Width: =476
+            X: =22
+            Y: =40
+            ZIndex: =3
+
+    compFOCBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =15
+

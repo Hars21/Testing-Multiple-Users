@@ -1,0 +1,107 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_zx_customer_forms",
+      "Namespace": "Customers (Forms)",
+      "Values": {
+        "Information": "956ec530-bfa3-45ab-bddc-ea1e63b31cbb"
+      }
+    },
+    {
+      "Kind": "default.cds_zx_customercategory_forms",
+      "Namespace": "Customer categories (Forms)",
+      "Values": {
+        "Information": "11432ab5-bcdc-41ed-9f7a-d8e0bfe3eec9"
+      }
+    },
+    {
+      "Kind": "default.cds_zx_itemsmaster_forms",
+      "Namespace": "Items Masters (Forms)",
+      "Values": {
+        "Information": "fc6bf63d-6966-4f77-9cda-fc2b9f5cba76"
+      }
+    },
+    {
+      "Kind": "default.cds_zx_beatmaster_forms",
+      "Namespace": "Beat Masters (Forms)",
+      "Values": {
+        "Information": "3db62462-f6fc-4dc6-8d32-df94906955da"
+      }
+    },
+    {
+      "Kind": "default.cds_zx_beatplan_forms",
+      "Namespace": "Beat Plans (Forms)",
+      "Values": {
+        "Information": "cd5136b5-9f71-4367-a933-c4a89fe19358"
+      }
+    },
+    {
+      "Kind": "default.cds_account_forms",
+      "Namespace": "Accounts (Forms)",
+      "Values": {
+        "Account": "8448b78f-8f42-454e-8e2a-f8196b0419af",
+        "account card": "b028db32-3619-48a5-ac51-cf3f947b0ef3",
+        "Account Card form": "cccff382-2b92-467e-bf1b-3db179512af8",
+        "Account for Interactive experience": "a72c7955-442b-4ea4-9499-b10cd18b4256",
+        "Account for Multisession experience": "ff49442f-8c60-4877-bdae-8fe51e6f4636",
+        "Account Hierarchy Tile Form": "69cff312-cfb6-4289-9631-249ab85d2c62",
+        "Account Quick Create": "c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b",
+        "Account Reference Panel": "098ae145-1567-41ec-8398-86dbaac70c9b",
+        "Accounts Dashboard": "15915835-b87c-49ec-9ffc-bfac3ac44ef1",
+        "App for Outlook Account Card": "fb65cc73-181c-468b-9bb3-82ecde306991",
+        "App for Outlook Account Quick View": "76b81f10-2a08-4f1a-9454-ee38bea94eb5",
+        "Customer profile": "e9a9c8a9-e94d-47a9-a6c3-ec37ddb83b99",
+        "In Context Form": "face3aa6-99c4-4b7e-af07-55f121cdca86",
+        "Information": "b053a39a-041a-4356-acef-ddf00182762b",
+        "Recent Cases and Entitlements": "43300723-f867-420b-ab28-976a4d12e6c4",
+        "Sales Insights": "cb430327-bcc1-416d-959d-db7592e685af",
+        "Social Profiles": "2205c86d-ed88-4a2f-a447-3b86a8781f2e",
+        "TimelineWallControl - Account- Main": "6df8e8ce-7655-468c-925e-660d59aa7f4c"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_new_beat_forms",
+      "Namespace": "Beats (Forms)",
+      "Values": {
+        "Information": "19d33ae2-e2c2-49cd-9148-e2c27fe73dad"
+      }
+    },
+    {
+      "Kind": "default.cds_zx_userbeatmapping_forms",
+      "Namespace": "User beat mappings (Forms)",
+      "Values": {
+        "Information": "8bb282f3-14cf-45f7-a06d-ef1a9f112ec2"
+      }
+    },
+    {
+      "Kind": "default.cds_product_forms",
+      "Namespace": "Products (Forms)",
+      "Values": {
+        "Information": "42805efb-1f65-4ae8-91bc-618967a55c6e",
+        "Product": "a640be62-63f6-4027-90d7-48c014a7c6f3",
+        "Product family Quick Create": "fd57aeed-ab95-4a32-9c6c-61ae92d2a296",
+        "Product Hierarchy Tile Form": "44c9f1ee-9bce-4c6f-9a7f-6568be05c41c",
+        "Product Quick Create": "672e520b-6bbc-47f8-977f-228bfc6d8faf"
+      }
+    },
+    {
+      "Kind": "default.cds_salesorderdetail_forms",
+      "Namespace": "Order Products (Forms)",
+      "Values": {
+        "Information": "2bb64321-6da0-4a1a-8466-62b40cc6bc7a",
+        "SalesOrderDetail": "a54fa9b7-bd31-49c4-8ccd-b8ccc42f4fc4"
+      }
+    }
+  ]
+}

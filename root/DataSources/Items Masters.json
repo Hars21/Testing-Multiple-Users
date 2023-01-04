@@ -1,0 +1,121 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "zx_itemsmasters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "zx_itemsmaster",
+    "MaxGetRowsCount": 500,
+    "Name": "Items Masters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "zx_itemdescription": "Item Description",
+      "zx_itemsmaster_AsyncOperations": "System Jobs",
+      "zx_itemsmaster_BulkDeleteFailures": "Bulk Delete Failures",
+      "zx_itemsmaster_DuplicateBaseRecord": "Duplicate Records (zx_itemsmaster_DuplicateBaseRecord)",
+      "zx_itemsmaster_DuplicateMatchingRecord": "Duplicate Records (zx_itemsmaster_DuplicateMatchingRecord)",
+      "zx_itemsmaster_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "zx_itemsmaster_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "zx_itemsmaster_ProcessSession": "Process Sessions",
+      "zx_itemsmaster_SyncErrors": "Sync Errors",
+      "zx_itemsmasterid": "Items Master",
+      "zx_mrp": "MRP",
+      "zx_name": "Name",
+      "zx_productgroupcode": "Product group Code",
+      "zx_uom": "UOM"
+    },
+    "PreferredName": "Items Masters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Items Masters (Views)",
+    "Name": "_zx_itemsmaster_views",
+    "RelatedEntityName": "Items Masters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "05705ba1-ca62-49d2-93fe-bca7d804b2e0": "Items Master Associated View",
+      "091fdd0c-1c8e-42e6-8c13-19f175d63a38": "Inactive Items Masters",
+      "9d304968-938f-4b17-8ab3-a2fe8f26c840": "Active Items Masters",
+      "b04d2182-bbae-47d1-8186-b98a79bf0ba1": "Items Master Lookup View",
+      "eba794c8-3d98-466e-a569-d7d921eb46b9": "Items Master Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Items Masters)",
+    "Name": "zx_itemsmaster_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Items Masters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Items Masters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Items Masters)",
+    "Name": "zx_itemsmaster_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Items Masters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Items Masters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Product group Code (Items Masters)",
+    "Name": "zx_itemsmaster_zx_productgroupcode",
+    "OptionSetInfoNameMapping": {
+      "425120000": "2 way",
+      "425120001": "1 way"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "zx_productgroupcode",
+        "OptionSetReferenceEntityName": "Items Masters"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "zx_productgroupcode",
+    "RelatedEntityName": "Items Masters",
+    "Type": "OptionSetInfo"
+  }
+]

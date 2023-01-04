@@ -1,0 +1,225 @@
+"'New Payment Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.LightText
+
+    canPayment As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =App.Height-175
+        Width: =Parent.Width
+        Y: =80
+        ZIndex: =1
+
+        dataCardPayment As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1320
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            lblPaymentAmountLabel As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Amount"
+                Width: =230
+                X: =40
+                Y: =436
+                ZIndex: =1
+
+            txtPaymentAmountValue As text:
+                AccessibleLabel: ="txtPaymentAmountValue"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                Default: =""
+                FocusedBorderThickness: =2
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Enter Amount"
+                HoverBorderColor: =_VarGblAppColors.BisleriBlue
+                HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, 80%)
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =230
+                X: =352
+                Y: =433
+                ZIndex: =2
+
+            lblPaymentRemainingAmountValue As label:
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="504"
+                Width: =217
+                X: =352
+                Y: =486
+                ZIndex: =5
+
+            lblPaymentRemainingAmount As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Remaining Amount"
+                Width: =267
+                X: =40
+                Y: =486
+                ZIndex: =6
+
+            lblModeOfPayment As label:
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.Title
+                Text: ="Mode of Payment"
+                Width: =560
+                X: =40
+                Y: =258
+                ZIndex: =9
+
+            rdbModeOfPayment As radio:
+                AccessibleLabel: ="rdbModeOfPayment"
+                FocusedBorderThickness: =0.5
+                Height: =63
+                Items: =["Cash", "Cheque"]
+                Layout: =Layout.Horizontal
+                RadioSelectionFill: =_VarGblAppColors.BisleriBlue
+                RadioSize: =42
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Width: =293
+                X: =40
+                Y: =298
+                ZIndex: =10
+
+            lblPaymentDate As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Semibold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Date"
+                Width: =230
+                X: =40
+                Y: =388
+                ZIndex: =11
+
+            shpLowerRect As rectangle:
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =_VarGblAppColors.BottomListBg
+                Height: =60
+                Width: =App.Width
+                Y: =102
+                ZIndex: =18
+
+            lblPaymentAmount As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Pending Amount (INR)"
+                Width: =307
+                Y: =177
+                ZIndex: =20
+
+            lblPaymentAmountValue As label:
+                Color: =_VarGblAppColors.BisleriBlue
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =21
+                Text: ="₹ 1504"
+                Width: =307
+                X: =320
+                Y: =177
+                ZIndex: =22
+
+            lblPaymentDetails As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Height: =60
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Payment Details"
+                Width: =307
+                X: =10
+                Y: =102
+                ZIndex: =23
+
+            ImgPaymentPaytm As image:
+                BorderColor: =_VarGblAppColors.HeaderBg
+                BorderThickness: =2
+                Height: =67
+                Image: ='Paytm Image'
+                Visible: =If(rdbModeOfPayment.Selected.Value ="Cash", true, false)
+                Width: =135
+                X: =362
+                Y: =290
+                ZIndex: =24
+
+            lblPaymentDateValue As label:
+                Color: =_VarGblAppColors.PrimaryText
+                FontWeight: =FontWeight.Bold
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: =Text(DateValue(Today()), "mmm dd, yyyy")
+                Width: =217
+                X: =352
+                Y: =388
+                ZIndex: =25
+
+            cmbPaymentCustomer As combobox:
+                AccessibleLabel: ="cmbPaymentCustomer"
+                BorderColor: =_VarGblAppColors.BisleriBlueMediumLight
+                ChevronBackground: =_VarGblAppColors.BisleriBlue
+                ChevronFill: =White
+                ChevronHoverBackground: =_VarGblAppColors.BisleriBlue
+                ChevronHoverFill: =_VarGblAppColors.BisleriBlue
+                Color: =_VarGblAppColors.BisleriBlue
+                DisplayFields: =["Value"]
+                Height: =53
+                HoverFill: =_VarGblAppColors.BisleriBlueMediumLight
+                InputTextPlaceholder: ="Select Customer"
+                Items: =["Anil Sharma", "Astha Gupta", "Sneha Verma"]
+                PressedFill: =_VarGblAppColors.BisleriBlueMediumLight
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Anil Sharma", "Astha Gupta", "Sneha Verma"],cmbPaymentCustomer.SearchText,"Value")
+                SelectionFill: =_VarGblAppColors.BisleriBlue
+                SelectMultiple: =false
+                Size: =18
+                Width: =580
+                X: =30
+                Y: =26
+                ZIndex: =27
+
+            grpPaymentButtons As group:
+                Height: =5
+                Width: =5
+                X: =80
+                Y: =80
+                ZIndex: =27
+
+                btnPaymentCancel As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: =Navigate('Payment Screen');
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Cancel"
+                    Width: =150
+                    X: =355
+                    Y: =575
+                    ZIndex: =16
+
+                btnPaymentConfirm As button:
+                    Fill: =_VarGblAppColors.BisleriBlue
+                    FocusedBorderThickness: =2
+                    Height: =50
+                    HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                    OnSelect: =Navigate('Payment Screen');
+                    Size: =_VarGblAppFonts.Size.UpperMedium
+                    Text: ="Confirm"
+                    Width: =150
+                    X: =177
+                    Y: =575
+                    ZIndex: =26
+
+    compPaymentHeader As Header:
+        HeaderText: ="Payment"
+        ZIndex: =4
+
+    compPaymentBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =5
+

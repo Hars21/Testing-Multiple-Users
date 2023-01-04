@@ -1,0 +1,723 @@
+"'Van Transfer' As screen":
+
+    Header_1 As Header:
+        HeaderText: ="Van Tranfer"
+
+    BottomBar_3 As BottomBar:
+        Y: =1026
+        ZIndex: =2
+
+    Gallery13_3 As gallery.galleryHorizontal:
+        AccessibleLabel: ="Gallery13_3"
+        BorderColor: =RGBA(109, 109, 109, 1)
+        Height: =64
+        Items: |-
+            =Table(
+                {
+                    Title: "Transfer IN",
+                    id: 1
+                },
+                {
+                    Title: "Transfer OUT",
+                    id: 2
+                }
+            )
+        OnSelect: =
+        TabIndex: =0
+        TemplateSize: =312
+        Y: =90
+        ZIndex: =3
+
+        Button31_13 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =If(ThisItem.IsSelected,_VarGblAppColors.BisleriBlueLight, _VarGblAppColors.BisleriBlue)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =If(ThisItem.IsSelected, _VarGblAppColors.BisleriBlue, _VarGblAppColors.BisleriBlueLight)
+            FocusedBorderColor: =ColorFade(Self.Fill, 75%)
+            Height: =47
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(31, 31, 31, 1)
+            HoverFill: =ColorFade(Self.Color, 10%)
+            PressedBorderColor: =ColorFade(RGBA(255, 200, 61, 1), 50%)
+            PressedColor: =RGBA(31, 31, 31, 1)
+            PressedFill: =ColorFade(Self.Color, 30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =22
+            Text: =ThisItem.Title
+            Width: =305
+            X: =4
+            Y: =3
+            ZIndex: =1
+
+    canVanTransferOutData As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =862
+        Visible: =Gallery13_3.Selected.Title = "Transfer OUT"
+        Width: =Parent.Width
+        Y: =164
+        ZIndex: =4
+
+        dataCardVanTransferOut As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =982
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label2 As label:
+                Height: =50
+                Size: =21
+                Text: ="Salesman"
+                Width: =560
+                X: =25
+                Y: =15
+                ZIndex: =1
+
+            ComboBox4 As combobox:
+                AccessibleLabel: ="ComboBox4"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =_VarGblAppColors.BisleriBlue
+                ChevronHoverBackground: =_VarGblAppColors.BisleriBlueLight
+                ChevronHoverFill: =_VarGblAppColors.BisleriBlue
+                Height: =60
+                HoverColor: =_VarGblAppColors.BisleriBlue
+                HoverFill: =_VarGblAppColors.BisleriBlueLight
+                InputTextPlaceholder: ="Find Salesman"
+                Items: =ComboBoxSample
+                PressedFill: =_VarGblAppColors.BisleriBlue
+                SearchItems: =Search(ComboBoxSample,ComboBox4.SearchText,"Value1")
+                SelectionFill: =_VarGblAppColors.BisleriBlue
+                SelectMultiple: =false
+                Size: =21
+                Width: =575
+                X: =25
+                Y: =70
+                ZIndex: =2
+
+            Label2_1 As label:
+                Height: =50
+                Size: =21
+                Text: ="Vehicle No"
+                Width: =560
+                X: =25
+                Y: =147
+                ZIndex: =3
+
+            cmbVanTransferOutSelectVehicle As combobox:
+                AccessibleLabel: ="cmbVanTransferOutSelectVehicle"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =_VarGblAppColors.BisleriBlue
+                ChevronHoverBackground: =_VarGblAppColors.BisleriBlueLight
+                ChevronHoverFill: =_VarGblAppColors.BisleriBlue
+                Height: =60
+                HoverColor: =_VarGblAppColors.BisleriBlue
+                HoverFill: =_VarGblAppColors.BisleriBlueLight
+                InputTextPlaceholder: ="Find Vehicle"
+                Items: =ComboBoxSample
+                PressedFill: =_VarGblAppColors.BisleriBlue
+                SearchItems: =Search(ComboBoxSample,cmbVanTransferOutSelectVehicle.SearchText,"Value1")
+                SelectionFill: =_VarGblAppColors.BisleriBlue
+                SelectMultiple: =false
+                Size: =21
+                Width: =575
+                X: =25
+                Y: =202
+                ZIndex: =4
+
+            btnVanTransferOutConfirm As button:
+                Color: =_VarGblAppColors.LightText
+                Fill: =_VarGblAppColors.BisleriBlue
+                FocusedBorderThickness: =2
+                HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+                Size: =_VarGblAppFonts.Size.UpperMedium
+                Text: ="Confirm"
+                Width: =130
+                X: =455
+                Y: =910
+                ZIndex: =7
+
+            contHomeCheckInDemandUpperVertical_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =529
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =630
+                Y: =289
+                ZIndex: =8
+
+                contHomeCheckInDemandUpper_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =978
+                    LayoutMinHeight: =112
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    contHomeCheckInDemandLowerVertical_1 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =600
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowX: =LayoutOverflow.Scroll
+                        Width: =App.Width
+                        Y: =6
+                        ZIndex: =1
+
+                        contHomeCheckInDemandHeading_1 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =60
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =750
+                            Width: =910
+                            ZIndex: =1
+
+                            btnNewOrderHeaderProduct_10 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                Size: =_VarGblAppFonts.Size.Subtitle
+                                Text: ="Product"
+                                Width: =345
+                                X: =5
+                                Y: =5
+                                ZIndex: =1
+
+                            btnNewOrderHeaderCases_8 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                Size: =_VarGblAppFonts.Size.Subtitle
+                                Text: ="Transfer Out (Cases)"
+                                Width: =135
+                                X: =btnNewOrderHeaderPcs_24.X + btnNewOrderHeaderPcs_24.Width +5
+                                Y: =5
+                                ZIndex: =2
+
+                            btnNewOrderHeaderPcs_11 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                Size: =_VarGblAppFonts.Size.Subtitle
+                                Text: ="Transfer Out (Pcs)"
+                                Width: =135
+                                X: =btnNewOrderHeaderCases_8.X + btnNewOrderHeaderCases_8.Width +5
+                                Y: =5
+                                ZIndex: =3
+
+                            btnNewOrderHeaderCases_10 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                Size: =_VarGblAppFonts.Size.Subtitle
+                                Text: ="Stock (Cases)"
+                                Width: =135
+                                X: =btnNewOrderHeaderProduct_10.X + btnNewOrderHeaderProduct_10.Width + 5
+                                Y: =5
+                                ZIndex: =4
+
+                            btnNewOrderHeaderPcs_24 As button:
+                                DisabledBorderColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisabledColor: |-
+                                    =//RGBA(166, 166, 166, 1)
+                                    _VarGblAppColors.LightText
+                                DisabledFill: |-
+                                    =//RGBA(244, 244, 244, 1)
+                                    _VarGblAppColors.BisleriBlue
+                                DisplayMode: =DisplayMode.Disabled
+                                Height: =50
+                                OnSelect: =
+                                Size: =_VarGblAppFonts.Size.Subtitle
+                                Text: ="Stock (Pcs)"
+                                Width: =135
+                                X: =btnNewOrderHeaderCases_10.X + btnNewOrderHeaderCases_10.Width +5
+                                Y: =5
+                                ZIndex: =5
+
+                        contHomeCheckInDemandData_1 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =Parent.Height
+                            LayoutMinHeight: =570
+                            LayoutMinWidth: =850
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =910
+                            ZIndex: =2
+
+                            galVanTransferOutData As gallery.galleryVertical:
+                                AccessibleLabel: ="galVanTransferOutData"
+                                Fill: |-
+                                    =RGBA(0, 0, 0, 0)
+                                    //_VarGblAppColors.BackgroundColor
+                                Height: =508
+                                Items: ='Items Masters'
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =150
+                                LayoutMinWidth: =320
+                                ShowScrollbar: =false
+                                TabIndex: =0
+                                TemplateSize: =80
+                                Width: =620
+                                X: =5
+                                Y: =354
+                                ZIndex: =1
+
+                                btnVanTransferOutBackground As button:
+                                    DisabledFill: |-
+                                        =//RGBA(244, 244, 244, 1)
+                                        ColorFade( _VarGblAppColors.BisleriBlue, 80%)
+                                    DisplayMode: =DisplayMode.Disabled
+                                    Height: =galVanTransferOutData.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =24
+                                    Text: =""
+                                    Width: =Parent.Width-10
+                                    ZIndex: =1
+
+                                lblVanTransferOutProductName As label:
+                                    Align: =Align.Center
+                                    Color: =_VarGblAppColors.BisleriBlue
+                                    Height: =44
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Regular
+                                    Text: =ThisItem.Name
+                                    Width: =345
+                                    Y: =1
+                                    ZIndex: =2
+
+                                txtVanTransferOutCases As text:
+                                    AccessibleLabel: ="txtVanTransferOutCases"
+                                    BorderColor: |-
+                                        =//RGBA(0, 18, 107, 1)
+                                        ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                                    Default: =""
+                                    FocusedBorderThickness: =2
+                                    Format: =TextFormat.Number
+                                    Height: =41
+                                    HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                                    HoverFill: |-
+                                        =//RGBA(186, 202, 226, 1)
+                                        ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Subtitle
+                                    Width: =77
+                                    X: =655
+                                    Y: =19
+                                    ZIndex: =6
+
+                                txtVanTransferOutPcs As text:
+                                    AccessibleLabel: ="txtVanTransferOutPcs"
+                                    BorderColor: |-
+                                        =//RGBA(0, 18, 107, 1)
+                                        ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                                    Default: =""
+                                    FocusedBorderThickness: =2
+                                    Format: =TextFormat.Number
+                                    Height: =41
+                                    HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                                    HoverFill: |-
+                                        =//RGBA(186, 202, 226, 1)
+                                        ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Subtitle
+                                    Width: =77
+                                    X: =790
+                                    Y: =19
+                                    ZIndex: =10
+
+                                lblVanTransferOutProductDescription As label:
+                                    Align: =Align.Center
+                                    Height: =44
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Tiny
+                                    Text: =ThisItem.'Item Description'
+                                    Width: =345
+                                    Y: =36
+                                    ZIndex: =11
+
+                                lblVanTransferOutProductDescription_1 As label:
+                                    Align: =Align.Center
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Subtitle
+                                    Text: ="50"
+                                    Width: =135
+                                    X: =345
+                                    Y: =15
+                                    ZIndex: =12
+
+                                lblVanTransferOutProductDescription_2 As label:
+                                    Align: =Align.Center
+                                    Height: =50
+                                    OnSelect: =Select(Parent)
+                                    Size: =_VarGblAppFonts.Size.Subtitle
+                                    Text: ="66"
+                                    Width: =135
+                                    X: =500
+                                    Y: =15
+                                    ZIndex: =13
+
+    galVanTransferInData As gallery.galleryVertical:
+        AccessibleLabel: ="galVanTransferInData"
+        BorderColor: =RGBA(109, 109, 109, 1)
+        Height: =824
+        Items: |-
+            =Table(
+                {
+                    Title: "Bisleri Fonzo",
+                    Vehicle: "3425",
+                    Salesperson: "Vaishali",
+                    Qty: 4,
+                    UOM: "Cases"
+                },
+                 {
+                    Title: "Bisleri 20 liter WaterCan",
+                    Vehicle: "1203",
+                    Salesperson: "Vaishali",
+                    Qty: 7,
+                    UOM: "PCS"
+                },
+                 {
+                    Title: "Bisleri 500ml Bottle",
+                    Vehicle: "1352",
+                    Salesperson: "Vaishali",
+                    Qty: 4,
+                    UOM: "Cases"
+                },
+                 {
+                    Title: "Bisleri Club Soda",
+                    Vehicle: "1903",
+                    Salesperson: "Vaishali",
+                    Qty: 7,
+                    UOM: "PCS"
+                },
+                 {
+                    Title: "Bisleri Vedica",
+                    Vehicle: "2002",
+                    Salesperson: "Vaishali",
+                    Qty: 8,
+                    UOM: "Cases"
+                },
+                 {
+                    Title: "Bisleri Spyci",
+                    Vehicle: "1554",
+                    Salesperson: "Vaishali",
+                    Qty: 7,
+                    UOM: "PCS"
+                },
+                 {
+                    Title: "Bisleri Hand Purifiers",
+                    Vehicle: "1752",
+                    Salesperson: "Vaishali",
+                    Qty: 3,
+                    UOM: "Cases"
+                }
+            )
+        Layout: =Layout.Vertical
+        OnSelect: =
+        TabIndex: =0
+        TemplateSize: =146
+        Visible: =Gallery13_3.Selected.Title = "Transfer IN"
+        Y: =189
+        ZIndex: =5
+
+        htmlblVanTransferInBackground As htmlViewer:
+            Color: =RGBA(242, 242, 242, 1)
+            Height: =152
+            HtmlText: |-
+                ="<div style='border-radius:15px 15px 15px 15px; background-color:#E6F7F6; width:590px; height:140px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =610
+            X: =9
+            ZIndex: =1
+
+        lblVanTransferInProductName As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Semibold
+            OnSelect: |-
+                =//Navigate('customer info',ScreenTransition.Fade, {detailsssssss69: ThisItem.Account});
+                //Reset(customerinfo)
+                Navigate('Customer Detail Screen', ScreenTransition.Cover, {CustData:ThisItem})
+            Size: =17
+            TabIndex: =0
+            Text: =ThisItem.Title
+            Width: =379
+            X: =56
+            Y: =15
+            ZIndex: =2
+
+        lblVanTransferInVehicle As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.PrimaryText
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: ="Vehicle"
+            Width: =72
+            X: =56
+            Y: =62
+            ZIndex: =27
+
+        lblVanTransferInVehicleValue As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: =ThisItem.Vehicle
+            Width: =170
+            X: =194
+            Y: =62
+            ZIndex: =28
+
+        lblVanTransferInQuantity As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.PrimaryText
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: ="Quantity"
+            Width: =147
+            X: =56
+            Y: =97
+            ZIndex: =29
+
+        lblVanTransferInQuantityValue As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =14
+            Text: =ThisItem.Qty
+            Width: =170
+            X: =194
+            Y: =97
+            ZIndex: =30
+
+        lblVanTransferInSalesperson As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.PrimaryText
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =23
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: ="Salesperson"
+            Width: =157
+            X: =337
+            Y: =62
+            ZIndex: =31
+
+        lblVanTransferInUOM As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.PrimaryText
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =23
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: ="UOM"
+            Width: =157
+            X: =337
+            Y: =99
+            ZIndex: =32
+
+        lblVanTransferInUOMValue As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.UOM
+            Width: =133
+            X: =476
+            Y: =99
+            ZIndex: =33
+
+        lblVanTransferInSalespersonValue As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Salesperson
+            Width: =133
+            X: =476
+            Y: =62
+            ZIndex: =34
+
+        chkVanTransferInGal As checkbox:
+            BorderColor: =_VarGblAppColors.BisleriBlue
+            CheckboxBorderColor: =_VarGblAppColors.BisleriBlue
+            CheckboxSize: =30
+            CheckmarkFill: =_VarGblAppColors.BisleriBlue
+            Height: =34
+            HoverColor: =Self.Color
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: ="Option"
+            Width: =35
+            X: =25
+            Y: =18
+            ZIndex: =35
+
+    btnVanTransferConfirm As button:
+        Color: =_VarGblAppColors.BisleriBlueLight
+        Fill: =_VarGblAppColors.BisleriBlue
+        Height: =35
+        HoverFill: =Self.Color
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =16
+        Text: ="REJECT"
+        Visible: =Gallery13_3.Selected.Title = "Transfer IN"
+        Width: =167
+        X: =432
+        Y: =154
+        ZIndex: =6
+
+    btnVanTransferConfirm_1 As button:
+        Color: =_VarGblAppColors.BisleriBlueLight
+        Fill: =_VarGblAppColors.BisleriBlue
+        Height: =35
+        HoverFill: =Self.Color
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =16
+        Text: ="APPROVE"
+        Visible: =Gallery13_3.Selected.Title = "Transfer IN"
+        Width: =167
+        X: =253
+        Y: =153
+        ZIndex: =9
+
+    grpVanTransferSelectAll As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        btnVanTransferSelectAll As button:
+            Fill: =_VarGblAppColors.BisleriBlue
+            Height: =35
+            HoverFill: =Self.Color
+            PaddingLeft: =25
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =18
+            Text: =""
+            Visible: =Gallery13_3.Selected.Title = "Transfer IN"
+            Width: =178
+            X: =24
+            Y: =154
+            ZIndex: =7
+
+        chkVanTransferSelectAll As checkbox:
+            BorderColor: =_VarGblAppColors.BisleriBlue
+            CheckboxBorderColor: =_VarGblAppColors.BisleriBlue
+            CheckboxSize: =30
+            CheckmarkFill: =_VarGblAppColors.BisleriBlue
+            Color: =_VarGblAppColors.BisleriBlueLight
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            HoverColor: =Self.Color
+            OnSelect: =
+            Size: =16
+            Text: ="SELECT ALL"
+            Visible: =Gallery13_3.Selected.Title = "Transfer IN"
+            Width: =178
+            X: =24
+            Y: =154
+            ZIndex: =8
+

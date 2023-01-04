@@ -1,0 +1,47 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(
+            _VarGblAppColors,
+            {
+                BackgroundColor: ColorValue("#F2F2F2"),//light gray
+                HeaderBg: ColorValue("#000000"),//black
+                PrimaryText: ColorValue("#000000"),//black
+                SecondaryText: ColorValue("#6F7EA8"),//blue
+                LightText: ColorValue("#FFFFFF"),//white
+                PrimaryRed: ColorValue("#C5242C"),//red
+                PrimaryYellow: ColorValue("#ffc300"),//Yellow
+                PrimaryBg: ColorValue("#4D4D4D"),//dark gray
+                GreenColor: ColorValue("#00A86B"),//green
+                AccentBg: ColorValue("#00ffe5"),
+                BisleriBlue: ColorValue("#00B3A1"),//BisleriBlue
+                BisleriBlueLight: ColorValue("#E6F7F6"),//BisleriBlueLight
+                BisleriBlueMediumLight: ColorValue("#B3E8E3"),//BisleriBlueMediumLight
+                BottomListBg: ColorFade(
+                    ColorValue("#000000"),//
+                    80%
+                )
+            }
+        );
+        Set(
+            _VarGblAppFonts,
+            {
+                Heading: "Roboto, Open Sans",
+                Body: "Lato",
+                Size: {
+                    Tiny: 10,
+                    Regular: 12,
+                    Subtitle: 14,
+                    Medium: 16,
+                    UpperMedium:18,
+                    Title: 20,
+                    Huge: 28
+                }
+            }
+        );
+        
+        Set(clickedItem, "Dashboard");
+        Reset(txtLoginUsername);
+        Reset(txtLoginPassword);
+    StartScreen: ='Login Screen'
+
