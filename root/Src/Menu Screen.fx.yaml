@@ -1,0 +1,173 @@
+"'Menu Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.BisleriBlueLight
+
+    galMenuAllMenu As gallery.galleryVertical:
+        AccessibleLabel: ="galMenuAllMenu"
+        Height: =652
+        Items: |-
+            =Table(
+                {
+                    Title:"Gate Pass",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:GatePassScreen
+                },
+                 {
+                    Title:"Visit Plan",
+                    Id:6,
+                    Image:'Beat Image White',
+                    NavScreen:'Visit Screen'
+                },
+                {
+                    Title:"Beat Plan",
+                    Id:7,
+                    Image:'Beat Plan Image White',
+                    NavScreen:BeatPlanScreen
+                },
+                {
+                    Title:"Customer Onboarding",
+                    Id:4,
+                    Image:'Onboarding Image White',
+                    NavScreen:'Retailer Onboarding Screen'
+                },
+                {
+                    Title:"Van Transfer",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:'Van Transfer'
+                },
+                {
+                    Title:"Orders",
+                    Id:2,
+                    Image:'Order Image White',
+                    NavScreen: OrderScreen
+                },
+                {
+                    Title:"Replacements",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:ReplacementScreen
+                },
+                 {
+                    Title:"Empty Jars",
+                    Id:8,
+                    Image:'Visit Image White',
+                    NavScreen:EmptyJarScreen
+                },
+                {
+                    Title:"Payments",
+                    Id:5,
+                    Image:'Payment Image White',
+                    NavScreen:'Payment Screen'
+                },
+                {
+                    Title:"Stocks",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:StockInventoryScreen
+                },
+                {
+                    Title:"Demands",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:NewDemandScreen
+                },
+                {
+                    Title:"FOC's",
+                    Id:9,
+                    Image:'Visit Image White',
+                    NavScreen:FOCScreen
+                }
+            )
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TabIndex: =
+        TemplateSize: =223
+        Width: =639
+        WrapCount: =2
+        Y: =387
+        ZIndex: =6
+
+        btnGalMenuBackground As button:
+            Color: |-
+                =//RGBA(255, 255, 255, 1)
+                _VarGblAppColors.PrimaryBg
+            DisabledFill: =_VarGblAppColors.BisleriBlueMediumLight
+            Fill: =_VarGblAppColors.LightText
+            FocusedBorderThickness: =2
+            FontWeight: =FontWeight.Bold
+            Height: =216
+            HoverColor: |-
+                =//RGBA(255, 255, 255, 1)
+                _VarGblAppColors.PrimaryBg
+            HoverFill: |-
+                =//ColorFade(RGBA(56, 96, 178, 1), -20%)
+                _VarGblAppColors.LightText
+            OnSelect: =Navigate(ThisItem.NavScreen)
+            PaddingTop: =140
+            PressedBorderColor: =ColorFade(Self.Fill, -15%)
+            PressedColor: |-
+                =//Self.Fill
+                _VarGblAppColors.PrimaryBg
+            PressedFill: |-
+                =//Self.Color
+                _VarGblAppColors.LightText
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =_VarGblAppFonts.Size.Medium
+            Text: =ThisItem.Title
+            Width: =300
+            X: =10
+            ZIndex: =1
+
+        grpGalMenuIcon As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+            shpGalMenuCircle As circle:
+                AccessibleLabel: ="grpGalMenuIcon"
+                Fill: =_VarGblAppColors.BisleriBlueMediumLight
+                Height: =120
+                OnSelect: =Navigate(ThisItem.NavScreen)
+                TabIndex: =
+                Width: =120
+                X: =96
+                Y: =28
+                ZIndex: =2
+
+            shpGalMenuOct As octagon:
+                AccessibleLabel: ="grpGalMenuIcon"
+                BorderColor: =_VarGblAppColors.BisleriBlue
+                BorderThickness: =4
+                Fill: |-
+                    =//RGBA(0,0,0,0)
+                    _VarGblAppColors.BisleriBlue
+                OnSelect: =Navigate(ThisItem.NavScreen)
+                TabIndex: =0
+                X: =106
+                Y: =38
+                ZIndex: =3
+
+            imgGalIcon As image:
+                AccessibleLabel: ="grpGalMenuIcon"
+                Height: =60
+                Image: =ThisItem.Image
+                OnSelect: =Navigate(ThisItem.NavScreen)
+                TabIndex: =0
+                Width: =60
+                X: =126
+                Y: =58
+                ZIndex: =4
+
+    compMenuBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =19
+
+    "compMenuUserDetails As 'Menu Component'":
+        ZIndex: =20
+

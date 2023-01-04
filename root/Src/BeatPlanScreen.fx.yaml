@@ -1,0 +1,160 @@
+"BeatPlanScreen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.BackgroundColor
+    OnVisible: =ClearCollect(colBeatPlanFilter, 'Beat Plans')
+
+    canBaseScreen_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =App.Height-175
+        Width: =Parent.Width
+        Y: =80
+        ZIndex: =3
+
+        dataCardBaseScreen_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    compBaseHeader_2 As Header:
+        HeaderText: ="Beat Plan"
+        ZIndex: =4
+
+    compBaseBottomBar_2 As BottomBar:
+        Y: =1026
+        ZIndex: =5
+
+    galCustomerList_1 As gallery.galleryVertical:
+        AccessibleLabel: ="galCustomerList"
+        BorderColor: =RGBA(109, 109, 109, 1)
+        Height: =896
+        Items: |-
+            =//'Beat Plans'
+            colBeatPlanFilter
+        Layout: =Layout.Vertical
+        OnSelect: =
+        TabIndex: =
+        TemplateSize: =113
+        Y: =162
+        ZIndex: =6
+
+        htmGalCustomerBackground_1 As htmlViewer:
+            Color: =RGBA(242, 242, 242, 1)
+            Height: =181
+            HtmlText: |-
+                ="<div style='border-radius:15px 15px 15px 15px; background-color:#E6F7F6; width:590px; height:100px'></div>"
+            OnSelect: =Select(Parent)
+            Width: =610
+            X: =15
+            ZIndex: =1
+
+        lblGalCustomerName_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Semibold
+            OnSelect: |-
+                =//Navigate('customer info',ScreenTransition.Fade, {detailsssssss69: ThisItem.Account});
+                //Reset(customerinfo)
+                Navigate('Customer Detail Screen', ScreenTransition.Cover, {CustData:ThisItem})
+            Size: =17
+            TabIndex: =0
+            Text: =ThisItem.'Beat name'.Name
+            Width: =379
+            X: =36
+            Y: =8
+            ZIndex: =2
+
+        icoGalCustomerWaypoint_1 As icon.Waypoint:
+            AccessibleLabel: ="icoGalCustomerWaypoint"
+            BorderColor: =RGBA(109, 109, 109, 1)
+            Color: =_VarGblAppColors.PrimaryBg
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =40
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(255, 200, 61, 1), 30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Waypoint
+            OnSelect: |-
+                =Launch("http://www.google.com/maps/place/" & ThisItem.'Beat name'.'Beat name')
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(255, 200, 61, 1), 30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =
+            Width: =40
+            X: =545
+            Y: =11
+            ZIndex: =22
+
+        lblGalCustomerAddress_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.PrimaryText
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Semibold
+            Height: =22
+            Size: =12
+            Text: |-
+                ="Beat Name :"
+            Width: =140
+            X: =36
+            Y: =58
+            ZIndex: =27
+
+        lblGalCustomerAddress_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =_VarGblAppColors.BisleriBlue
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =22
+            Size: =12
+            Text: =ThisItem.'Beat name'.'Beat name'
+            Width: =250
+            X: =176
+            Y: =58
+            ZIndex: =28
+
+    Button8 As button:
+        Fill: =_VarGblAppColors.BisleriBlue
+        FocusedBorderThickness: =2
+        HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+        OnSelect: =ClearCollect(colBeatPlanFilter, 'Beat Plans')
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: ="All Plans"
+        Width: =180
+        X: =61
+        Y: =101
+        ZIndex: =7
+
+    BeatPlanDatePicker As datepicker:
+        AccessibleLabel: ="BeatPlanDatePicker"
+        BorderColor: =_VarGblAppColors.BisleriBlue
+        FocusedBorderThickness: =2
+        IconBackground: =_VarGblAppColors.BisleriBlue
+        OnChange: =ClearCollect(colBeatPlanFilter, LookUp('Beat Plans', Date=BeatPlanDatePicker.SelectedDate))
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Width: =250
+        X: =330
+        Y: =101
+        ZIndex: =8
+

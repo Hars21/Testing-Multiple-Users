@@ -1,0 +1,143 @@
+"LocationConfirmOnVisitScreen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =_VarGblAppColors.LightText
+
+    canLocationConfirm As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =App.Height-175
+        Width: =Parent.Width
+        Y: =80
+        ZIndex: =3
+
+        dataCardLocationConfirm As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    compLocationConfirmHeader As Header:
+        HeaderText: ="Checkin"
+        ZIndex: =4
+
+    compLocationConfirmBottomBar As BottomBar:
+        Y: =1026
+        ZIndex: =5
+
+    lblLocationConfirmCustomerName As label:
+        Color: =_VarGblAppColors.PrimaryText
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =24
+        Text: ="Anil Sharma Co."
+        Width: =284
+        X: =27
+        Y: =85
+        ZIndex: =6
+
+    lblLocationConfirmAddress As label:
+        Align: =Align.Justify
+        Color: =_VarGblAppColors.PrimaryText
+        FontWeight: =FontWeight.Semibold
+        Height: =67
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: ="Paras Season, Sector 168, Noida, UP"
+        Width: =597
+        X: =26
+        Y: =172
+        ZIndex: =7
+
+    lblLocationConfirmType As label:
+        Align: =Align.Justify
+        Color: =_VarGblAppColors.PrimaryText
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: |-
+            ="Contact Person :"
+        Width: =210
+        X: =26
+        Y: =144
+        ZIndex: =8
+
+    lblLocationConfirmTypeValue As label:
+        Align: =Align.Justify
+        Color: =_VarGblAppColors.PrimaryText
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: ="Ashok Sharma"
+        Width: =300
+        X: =229
+        Y: =144
+        ZIndex: =9
+
+    "mapLocationConfirm As 'Map (preview)'.pcfdataset":
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DefaultLocation: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =711
+        Items: =
+        ItemsLatitudes: =
+        ItemsLongitudes: =
+        PinColor: =RGBA(29, 114, 169, 1)
+        Width: =640
+        X: =0
+        Y: =242
+        ZIndex: =10
+
+        Value1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: |-
+                ="![lat:s, long:s]"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =2
+
+    grpLocationConfirmContinue As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        btnLocationConfirmContinue As button:
+            Color: =_VarGblAppColors.LightText
+            Fill: =_VarGblAppColors.BisleriBlue
+            FocusedBorderThickness: =2
+            Height: =49
+            HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+            OnSelect: |-
+                =//Set(_VarSignPopUp, !_VarSignPopUp)
+                Navigate(VisitExecution);
+            PaddingLeft: =25
+            Size: =_VarGblAppFonts.Size.Title
+            Text: ="     CONTINUE"
+            Width: =223
+            X: =400
+            Y: =977
+            ZIndex: =11
+
+        icoLocationConfirmContinue As icon.OpenInNewWindow:
+            AccessibleLabel: ="icoLocationConfirmContinue"
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =36
+            Icon: =Icon.OpenInNewWindow
+            OnSelect: |-
+                =//Set(_VarSignPopUp, !_VarSignPopUp)
+                Navigate(VisitExecution);
+            PaddingBottom: =7
+            PaddingLeft: =6
+            PaddingRight: =7
+            PaddingTop: =7
+            TabIndex: =0
+            Width: =36
+            X: =413
+            Y: =983
+            ZIndex: =12
+

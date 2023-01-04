@@ -1,0 +1,92 @@
+BottomBar As CanvasComponent:
+    Fill: =RGBA(242, 242, 242, 0)
+    Height: =110
+    NavItem: |-
+        =Table(
+            {
+                Title: "Start",
+                Icon: Icon.CalendarBlank,
+                Screen: 'Attendance Screen'
+            },
+            {
+                Title: "Visit",
+                Icon: Icon.Waypoint,
+                Screen: 'Visit Screen'
+            },
+            {
+                Title: "Dashboard",
+                Icon: Icon.Waffle,
+                Screen: 'Home Screen'
+            },
+            {
+                Title: "Party",
+                Icon: Icon.People,
+                Screen: 'Customer Screen'
+            },
+            {
+                Title: "Menu",
+                Icon: Icon.Hamburger,
+                Screen: 'Menu Screen'
+            }
+        )
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    galBottomBar As gallery.galleryHorizontal:
+        AccessibleLabel: ="galBottomBar"
+        BorderColor: =_VarGblAppColors.BisleriBlue
+        Height: =110
+        Items: =BottomBar.NavItem
+        OnSelect: |-
+            =Set(clickedItem, ThisItem.Title);
+            Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TabIndex: =0
+        TemplateSize: =122
+        ZIndex: =2
+
+        lblGalBottomBar As label:
+            Align: =Align.Center
+            Color: =If(clickedItem=ThisItem.Title, _VarGblAppColors.HeaderBg, _VarGblAppColors.PrimaryBg)
+            FocusedBorderThickness: =0.5
+            FontWeight: |-
+                =//FontWeight.Normal
+                If(clickedItem=ThisItem.Title, FontWeight.Semibold, FontWeight.Normal)
+            Height: =27
+            OnSelect: |-
+                =Set(clickedItem, ThisItem.Title);
+                Navigate(ThisItem.Screen)
+            Size: =_VarGblAppFonts.Size.Regular
+            TabIndex: =0
+            Text: =ThisItem.Title
+            Width: =122
+            Y: =68
+            ZIndex: =1
+
+        shpCircleGalBottomBar As circle:
+            Fill: =_VarGblAppColors.BisleriBlue
+            Height: =65
+            OnSelect: =Select(Parent)
+            Visible: =If(clickedItem=ThisItem.Title, true, false)
+            Width: =65
+            X: =28
+            ZIndex: =2
+
+        "icoGalBottomBar As icon.'3DPrinting'":
+            AccessibleLabel: ="icnStart"
+            Color: =If(clickedItem=ThisItem.Title, _VarGblAppColors.LightText, _VarGblAppColors.PrimaryBg)
+            FocusedBorderColor: =Transparent
+            FocusedBorderThickness: =0.1
+            Height: =If(clickedItem=ThisItem.Title, 30, 25)
+            Icon: =ThisItem.Icon
+            OnSelect: |-
+                =Set(clickedItem, ThisItem.Title);
+                Navigate(ThisItem.Screen)
+            TabIndex: =0
+            Width: =If(clickedItem=ThisItem.Title, 35, 25)
+            X: =If(clickedItem=ThisItem.Title, 43, 47)
+            Y: =If(clickedItem=ThisItem.Title, 17, 35)
+            ZIndex: =3
+

@@ -1,0 +1,514 @@
+NewOrder As CanvasComponent:
+    Fill: =_VarGblAppColors.BackgroundColor
+    Height: =900
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    contNewOrderUpperVertical As groupContainer.verticalAutoLayoutContainer:
+        Height: =525
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        contNewOrderUpper As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =978
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            Width: =Parent.Width
+            ZIndex: =1
+
+            contNewOrderLowerVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: =906
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowX: =LayoutOverflow.Scroll
+                Width: =Parent.Width
+                Y: =6
+                ZIndex: =1
+
+                contNewOrderHeader As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =60
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =250
+                    Width: =App.Width
+                    ZIndex: =1
+
+                    btnNewOrderHeaderProduct As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Product"
+                        Width: =220
+                        X: =5
+                        ZIndex: =1
+
+                    btnNewOrderHeaderCases As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Regular
+                        Text: ="Stock (Cases)"
+                        Width: =77
+                        X: =btnNewOrderHeaderProduct.X + btnNewOrderHeaderProduct.Width +5
+                        ZIndex: =2
+
+                    btnNewOrderHeaderPcs As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Regular
+                        Text: ="Stock (Pcs)"
+                        Width: =77
+                        X: =btnNewOrderHeaderCases.X + btnNewOrderHeaderCases.Width +5
+                        ZIndex: =3
+
+                    btnNewOrderHeaderReceivedEmptyJar As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Cases"
+                        Width: =77
+                        X: =btnNewOrderHeaderPcs.X + btnNewOrderHeaderPcs.Width +5
+                        ZIndex: =4
+
+                    btnNewOrderHeaderCases_22 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Subtitle
+                        Text: ="Pcs"
+                        Width: =77
+                        X: =btnNewOrderHeaderReceivedEmptyJar.X + btnNewOrderHeaderReceivedEmptyJar.Width +5
+                        ZIndex: =5
+
+                    btnNewOrderHeaderPcs_18 As button:
+                        DisabledBorderColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisabledColor: |-
+                            =//RGBA(166, 166, 166, 1)
+                            _VarGblAppColors.LightText
+                        DisabledFill: |-
+                            =//RGBA(244, 244, 244, 1)
+                            _VarGblAppColors.BisleriBlue
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =50
+                        OnSelect: =
+                        Size: =_VarGblAppFonts.Size.Tiny
+                        Text: ="Recieved Empty Jar"
+                        Width: =77
+                        X: =btnNewOrderHeaderCases_22.X + btnNewOrderHeaderCases_22.Width +5
+                        ZIndex: =6
+
+                contNewOrderData As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =461
+                    LayoutMinHeight: =570
+                    LayoutMinWidth: =640
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =contNewOrderHeader.Width
+                    ZIndex: =3
+
+                    galNewOrderProduct As gallery.galleryVertical:
+                        AccessibleLabel: ="galNewOrderProduct"
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: |-
+                            =//RGBA(0, 0, 0, 0)
+                            _VarGblAppColors.BackgroundColor
+                        FillPortions: =0
+                        Height: =450
+                        Items: ='Items Masters'
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =460
+                        LayoutMinWidth: =1200
+                        ShowScrollbar: =false
+                        TabIndex: =0
+                        TemplateSize: =80
+                        Width: =contNewOrderHeader.Width
+                        ZIndex: =1
+
+                        btnNewOrderDataBackground As button:
+                            DisabledFill: |-
+                                =//RGBA(244, 244, 244, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, 80%)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =24
+                            Text: =""
+                            Width: =Parent.Width-10
+                            ZIndex: =1
+
+                        lblNewOrderProductCode As label:
+                            Align: =Align.Center
+                            Color: =_VarGblAppColors.BisleriBlue
+                            FontWeight: =FontWeight.Semibold
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Regular
+                            Text: =ThisItem.Name
+                            Width: =220
+                            ZIndex: =2
+
+                        txtNewOrderPcs As text:
+                            AccessibleLabel: ="txtNewOrderActualDel"
+                            Align: =Align.Center
+                            BorderColor: |-
+                                =//RGBA(0, 18, 107, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                            HoverFill: |-
+                                =//RGBA(186, 202, 226, 1)
+                                ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =65
+                            X: =480
+                            Y: =20
+                            ZIndex: =6
+
+                        txtNewOrderRecEmpty As text:
+                            AccessibleLabel: ="txtNewOrderRecEmpty"
+                            Align: =Align.Center
+                            BorderColor: |-
+                                =//RGBA(0, 18, 107, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                            HoverFill: |-
+                                =//RGBA(186, 202, 226, 1)
+                                ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =65
+                            X: =396
+                            Y: =20
+                            ZIndex: =7
+
+                        shpNewOrderDataRectangle1 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =222
+                            ZIndex: =10
+
+                        shpNewOrderDataRectangle2 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =303
+                            ZIndex: =11
+
+                        shpNewOrderDataRectangle3 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =385
+                            ZIndex: =12
+
+                        txtNewOrderCasesValue As text:
+                            AccessibleLabel: ="txtNewOrderActualDel"
+                            Align: =Align.Center
+                            BorderColor: |-
+                                =//RGBA(0, 18, 107, 1)
+                                ColorFade( _VarGblAppColors.BisleriBlue, -30%)
+                            Default: =""
+                            FocusedBorderThickness: =2
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =ColorFade( _VarGblAppColors.BisleriBlue, 30%)
+                            HoverFill: |-
+                                =//RGBA(186, 202, 226, 1)
+                                ColorFade(_VarGblAppColors.BisleriBlue, 100%)
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Width: =65
+                            X: =558
+                            Y: =20
+                            ZIndex: =13
+
+                        lblNewOrderProductDescription As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Semibold
+                            Height: =50
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Tiny
+                            Text: =ThisItem.'Item Description'
+                            Width: =220
+                            Y: =30
+                            ZIndex: =14
+
+                        shpNewOrderDataRectangle3_1 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =468
+                            ZIndex: =15
+
+                        shpNewOrderDataRectangle3_2 As rectangle:
+                            Fill: |-
+                                =//RGBA(56, 96, 178, 1)
+                                _VarGblAppColors.LightText
+                            Height: =galNewOrderProduct.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Width: =2
+                            X: =550
+                            ZIndex: =16
+
+                        Label1 As label:
+                            Align: =Align.Center
+                            Height: =55
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Text: =ThisItem.MRP
+                            Width: =75
+                            X: =224
+                            Y: =12
+                            ZIndex: =17
+
+                        Label1_1 As label:
+                            Align: =Align.Center
+                            Height: =55
+                            OnSelect: =Select(Parent)
+                            Size: =_VarGblAppFonts.Size.Subtitle
+                            Text: =ThisItem.MRP
+                            Width: =75
+                            X: =303
+                            Y: =12
+                            ZIndex: =18
+
+    btnNewOrderBackground As button:
+        DisabledFill: |-
+            =//RGBA(244, 244, 244, 1)
+            _VarGblAppColors.LightText
+        DisplayMode: =DisplayMode.Disabled
+        Height: =296
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: =""
+        Width: =554
+        X: =43
+        Y: =521
+        ZIndex: =2
+
+    lblNewOrderDate As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Order Date :"
+        Width: =184
+        X: =114
+        Y: =560
+        ZIndex: =3
+
+    lblNewOrderQty As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Total Qty :"
+        Width: =184
+        X: =114
+        Y: =598
+        ZIndex: =4
+
+    lblNewOrderOrder As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Order Value :"
+        Width: =208
+        X: =114
+        Y: =636
+        ZIndex: =5
+
+    lblNewOrderEmptyJar As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Empty Jar Value :"
+        Width: =208
+        X: =114
+        Y: =674
+        ZIndex: =6
+
+    lblNewOrderDiscount As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Discount :"
+        Width: =184
+        X: =114
+        Y: =712
+        ZIndex: =7
+
+    lblNewOrderDateValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: =Text(DateValue(Today()), "dd mmm yyyy")
+        X: =353
+        Y: =560
+        ZIndex: =8
+
+    lblNewOrderQtyValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="122"
+        X: =353
+        Y: =598
+        ZIndex: =9
+
+    lblNewOrderOrderValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="₹12000"
+        X: =353
+        Y: =636
+        ZIndex: =10
+
+    lblNewOrderEmptyJarValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="₹345"
+        X: =353
+        Y: =674
+        ZIndex: =11
+
+    lblNewOrderDiscountValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="₹112"
+        X: =353
+        Y: =712
+        ZIndex: =12
+
+    lblNewOrderTotalOrder As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: |-
+            ="Total Order Value :"
+        Width: =220
+        X: =114
+        Y: =750
+        ZIndex: =13
+
+    lblNewOrderTotalOrderValue As label:
+        Color: |-
+            =//RGBA(0, 0, 0, 1)
+            _VarGblAppColors.PrimaryRed
+        FontWeight: =FontWeight.Bold
+        Height: =30
+        Size: =_VarGblAppFonts.Size.Medium
+        Text: ="₹12233"
+        X: =353
+        Y: =750
+        ZIndex: =14
+
+    Button1 As button:
+        Fill: =_VarGblAppColors.BisleriBlue
+        HoverFill: =ColorFade(_VarGblAppColors.BisleriBlue, -20%)
+        Size: =_VarGblAppFonts.Size.UpperMedium
+        Text: ="Confirm"
+        Width: =150
+        X: =245
+        Y: =844
+        ZIndex: =15
+
