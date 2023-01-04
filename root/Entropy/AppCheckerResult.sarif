@@ -104,18 +104,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VisitExecution"
+                  "fullyQualifiedName": "'Home Screen'"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "VisitExecution",
+                  "fullyQualifiedName": "'Home Screen'",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "VisitExecution",
-                "type": "VisitExecution"
+                "module": "Home Screen",
+                "type": "'Home Screen'"
               }
             }
           ],
@@ -133,18 +133,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home Screen'"
+                  "fullyQualifiedName": "VisitExecution"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home Screen'",
+                  "fullyQualifiedName": "VisitExecution",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Home Screen",
-                "type": "'Home Screen'"
+                "module": "VisitExecution",
+                "type": "VisitExecution"
               }
             }
           ],
@@ -215,7 +215,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"VisitExecution\" is 412, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home Screen\" is 412, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
