@@ -34,7 +34,7 @@
             "Name": "galleryTemplate1_2",
             "Parent": "galBottomBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1243,
+            "PublishOrderIndex": 1244,
             "Rules": [
               {
                 "Category": "Design",
@@ -134,7 +134,7 @@
             "Name": "shpCircleGalBottomBar",
             "Parent": "galBottomBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1244,
+            "PublishOrderIndex": 1245,
             "Rules": [
               {
                 "Category": "Design",
@@ -370,7 +370,7 @@
             "Name": "icoGalBottomBar",
             "Parent": "galBottomBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1245,
+            "PublishOrderIndex": 1246,
             "Rules": [
               {
                 "Category": "Data",
@@ -660,7 +660,7 @@
             "Name": "lblGalBottomBar",
             "Parent": "galBottomBar",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1246,
+            "PublishOrderIndex": 1247,
             "Rules": [
               {
                 "Category": "Data",
@@ -1009,7 +1009,7 @@
         "Name": "galBottomBar",
         "Parent": "BottomBar",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1242,
+        "PublishOrderIndex": 1243,
         "Rules": [
           {
             "Category": "Data",

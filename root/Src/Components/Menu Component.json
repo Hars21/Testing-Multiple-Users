@@ -127,7 +127,7 @@
         "Name": "btnHomeBackground",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1298,
+        "PublishOrderIndex": 1299,
         "Rules": [
           {
             "Category": "Data",
@@ -418,7 +418,7 @@
         "Name": "imgBisleri",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1299,
+        "PublishOrderIndex": 1300,
         "Rules": [
           {
             "Category": "Data",
@@ -772,7 +772,7 @@
         "Name": "imgProfileHome",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1300,
+        "PublishOrderIndex": 1301,
         "Rules": [
           {
             "Category": "Data",
@@ -1062,7 +1062,7 @@
         "Name": "icoBackHome",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1301,
+        "PublishOrderIndex": 1302,
         "Rules": [
           {
             "Category": "Data",
@@ -1318,7 +1318,7 @@
         "Name": "htmHomeBackground",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1302,
+        "PublishOrderIndex": 1303,
         "Rules": [
           {
             "Category": "Data",
@@ -1562,7 +1562,7 @@
         "Name": "lblHomeUsername",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1303,
+        "PublishOrderIndex": 1304,
         "Rules": [
           {
             "Category": "Data",
@@ -1932,7 +1932,7 @@
         "Name": "imgHomeProfile",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1304,
+        "PublishOrderIndex": 1305,
         "Rules": [
           {
             "Category": "Data",
@@ -2181,7 +2181,7 @@
         "Name": "htmHomeTodayDate",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1305,
+        "PublishOrderIndex": 1306,
         "Rules": [
           {
             "Category": "Data",
@@ -2408,7 +2408,7 @@
         "Name": "lblHomeTodayDate",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1306,
+        "PublishOrderIndex": 1307,
         "Rules": [
           {
             "Category": "Data",
@@ -2760,7 +2760,7 @@
         "Name": "lblHomeAttendanceType",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1307,
+        "PublishOrderIndex": 1308,
         "Rules": [
           {
             "Category": "Data",
@@ -3105,7 +3105,7 @@
         "Name": "lblHomeTotalHoursWorked",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1308,
+        "PublishOrderIndex": 1309,
         "Rules": [
           {
             "Category": "Data",
@@ -3464,7 +3464,7 @@
         "Name": "lblHomeTotalHoursWorkedValue",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1309,
+        "PublishOrderIndex": 1310,
         "Rules": [
           {
             "Category": "Data",
@@ -3844,7 +3844,7 @@
         "Name": "lblHomeAttendanceTypeValue",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1310,
+        "PublishOrderIndex": 1311,
         "Rules": [
           {
             "Category": "Data",
@@ -4196,7 +4196,7 @@
         "Name": "lblHomeDayStartedAt",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1311,
+        "PublishOrderIndex": 1312,
         "Rules": [
           {
             "Category": "Data",
@@ -4548,7 +4548,7 @@
         "Name": "lblHomeDayEndedAt",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1312,
+        "PublishOrderIndex": 1313,
         "Rules": [
           {
             "Category": "Data",
@@ -4907,7 +4907,7 @@
         "Name": "lblHomeDayStartedAtValue",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1313,
+        "PublishOrderIndex": 1314,
         "Rules": [
           {
             "Category": "Data",
@@ -5273,7 +5273,7 @@
         "Name": "lblHomeDayEndedAtValue",
         "Parent": "Menu Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1314,
+        "PublishOrderIndex": 1315,
         "Rules": [
           {
             "Category": "Data",
